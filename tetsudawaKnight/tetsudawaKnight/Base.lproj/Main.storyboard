@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scl-07-MaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-774.375" y="2019.7183098591549"/>
+            <point key="canvasLocation" x="-731" y="2526"/>
         </scene>
         <!--taskView-->
         <scene sceneID="DKV-GC-jXC">
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8g-SH-uNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395.625" y="1045.7746478873239"/>
+            <point key="canvasLocation" x="439" y="1552"/>
         </scene>
         <!--childNavi-->
         <scene sceneID="Maa-tc-3Ki">
@@ -107,7 +107,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBR-qK-ME8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-773" y="1046"/>
+            <point key="canvasLocation" x="-731" y="1552"/>
         </scene>
         <!--taskComp-->
         <scene sceneID="BDX-0P-33R">
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mnY-TM-Hjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="1046"/>
+            <point key="canvasLocation" x="1434" y="1552"/>
         </scene>
         <!--compEffect-->
         <scene sceneID="UaR-LJ-d3H">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrH-Dc-bWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2327" y="1046"/>
+            <point key="canvasLocation" x="2370" y="1552"/>
         </scene>
         <!--子タブ-->
         <scene sceneID="y85-qf-yix">
@@ -376,6 +376,67 @@
             </objects>
             <point key="canvasLocation" x="2025" y="-130.98591549295776"/>
         </scene>
+        <!--タスク完了-->
+        <scene sceneID="0eg-d8-KTL">
+            <objects>
+                <viewController storyboardIdentifier="taskCompletion" title="タスク完了" id="vIQ-wu-mHr" customClass="TaskComp" customModule="tetsudawaKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CQH-u8-ztz"/>
+                        <viewControllerLayoutGuide type="bottom" id="o9o-mL-X4p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gfM-F3-qVl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="受け取ったタスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2P1-i1-p53">
+                                <rect key="frame" x="19" y="94" width="283" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MnA-mj-hYo">
+                                <rect key="frame" x="0.0" y="153" width="320" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskSettingCell" id="vXS-Lf-iRL">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vXS-Lf-iRL" id="5Ae-Uq-gDr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="設定する値" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-jh-7cI">
+                                                    <rect key="frame" x="185" y="6" width="127" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク設定名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RL-Gt-QAB">
+                                                    <rect key="frame" x="23" y="11" width="154" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="taskName" destination="2P1-i1-p53" id="rF9-tR-cLK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dN-4y-PIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655.625" y="611.61971830985919"/>
+        </scene>
         <!--addTaskWithInput-->
         <scene sceneID="xXc-nZ-Hcn">
             <objects>
@@ -492,6 +553,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="taskTableView" destination="KN3-BA-CB8" id="izh-rQ-aNI"/>
+                        <segue destination="vIQ-wu-mHr" kind="show" identifier="toTaskComp" id="qba-q8-Nhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VI0-yf-wLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -525,6 +587,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xBH-xc-Aqq"/>
-        <segue reference="fD7-7p-Yww"/>
+        <segue reference="nu6-nf-yCY"/>
     </inferredMetricsTieBreakers>
 </document>

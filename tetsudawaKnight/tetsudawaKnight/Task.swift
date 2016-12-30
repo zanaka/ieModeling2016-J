@@ -14,14 +14,14 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var taskTableView: UITableView!
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (tasklist.count)
+        return (taskList.count)
     }
     
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
-        cell.textLabel?.text = tasklist[indexPath.row]
+        cell.textLabel?.text = taskList[indexPath.row].name
         
         return(cell)
     }
@@ -30,7 +30,7 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
      {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            tasklist.remove(at: indexPath.row)
+            taskList.remove(at: indexPath.row)
             taskTableView.reloadData()
         }
     }

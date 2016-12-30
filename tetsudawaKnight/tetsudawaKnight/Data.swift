@@ -8,6 +8,26 @@
 
 import Foundation
 
-var tasklist = ["掃除機する", "食器洗い",  "肩もみ"]
+
+// var tasklist = ["掃除機する", "食器洗い",  "肩もみ"]
+struct TaskStruct
+{
+    var name :String = "task"
+    var yen : Int = 100
+    
+    init(name :String, yen :Int)
+    {
+        self.name = name
+        self.yen = yen
+    }
+}
+
+var taskList: [TaskStruct] =
+[
+    TaskStruct(name: "掃除する", yen: 100),
+    TaskStruct(name: "食器洗い", yen: 200),
+    TaskStruct(name: "肩もみ", yen: 50)
+]
+
 var money = 1000
 var payHistoryList = ["100"]
