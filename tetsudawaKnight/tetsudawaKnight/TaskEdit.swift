@@ -1,23 +1,23 @@
 //
-//  Task.swift
+//  TaskEdit.swift
 //  tetsudawaKnight
 //
-//  Created by YUUYA PC on 2016/12/22.
+//  Created by Kaito Ishizuka on 2016/12/28.
 //  Copyright © 2016年 Kaito Ishizuka. All rights reserved.
 //
 
 import UIKit
 
-class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    @IBOutlet var taskTableView: UITableView!
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+
+    @IBOutlet weak var taskTableView: UITableView!
+     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return (tasklist.count)
     }
     
-
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
@@ -26,8 +26,8 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return(cell)
     }
     
-     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-     {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             tasklist.remove(at: indexPath.row)
@@ -46,6 +46,5 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }

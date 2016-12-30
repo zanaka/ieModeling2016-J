@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332B65DF1E13B5D90054E99B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332B65DE1E13B5D90054E99B /* Data.swift */; };
+		332B65E11E13B9BF0054E99B /* TaskEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332B65E01E13B9BF0054E99B /* TaskEdit.swift */; };
 		33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437DC1E022119001AE294 /* AppDelegate.swift */; };
 		33E437DF1E022119001AE294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437DE1E022119001AE294 /* ViewController.swift */; };
 		33E437E21E022119001AE294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E437E01E022119001AE294 /* Main.storyboard */; };
@@ -14,6 +16,8 @@
 		33E437E71E022119001AE294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E437E51E022119001AE294 /* LaunchScreen.storyboard */; };
 		33E437F21E022119001AE294 /* tetsudawaKnightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437F11E022119001AE294 /* tetsudawaKnightTests.swift */; };
 		33E437FD1E022119001AE294 /* tetsudawaKnightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437FC1E022119001AE294 /* tetsudawaKnightUITests.swift */; };
+		33EC74F01E14B158006A6635 /* AddTaskWithTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC74EF1E14B158006A6635 /* AddTaskWithTemp.swift */; };
+		33EC74F21E152F78006A6635 /* MoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC74F11E152F78006A6635 /* MoneyView.swift */; };
 		79200C521E0B4F7E00DD3D7D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79200C511E0B4F7E00DD3D7D /* Task.swift */; };
 		79200C541E0B4FB200DD3D7D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79200C531E0B4FB200DD3D7D /* History.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332B65DE1E13B5D90054E99B /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		332B65E01E13B9BF0054E99B /* TaskEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEdit.swift; sourceTree = "<group>"; };
 		33E437D91E022119001AE294 /* tetsudawaKnight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tetsudawaKnight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E437DC1E022119001AE294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33E437DE1E022119001AE294 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		33E437F81E022119001AE294 /* tetsudawaKnightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tetsudawaKnightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E437FC1E022119001AE294 /* tetsudawaKnightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetsudawaKnightUITests.swift; sourceTree = "<group>"; };
 		33E437FE1E022119001AE294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33EC74EF1E14B158006A6635 /* AddTaskWithTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskWithTemp.swift; sourceTree = "<group>"; };
+		33EC74F11E152F78006A6635 /* MoneyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyView.swift; sourceTree = "<group>"; };
 		79200C511E0B4F7E00DD3D7D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		79200C531E0B4FB200DD3D7D /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +117,10 @@
 				33E437E31E022119001AE294 /* Assets.xcassets */,
 				33E437E51E022119001AE294 /* LaunchScreen.storyboard */,
 				33E437E81E022119001AE294 /* Info.plist */,
+				332B65DE1E13B5D90054E99B /* Data.swift */,
+				332B65E01E13B9BF0054E99B /* TaskEdit.swift */,
+				33EC74EF1E14B158006A6635 /* AddTaskWithTemp.swift */,
+				33EC74F11E152F78006A6635 /* MoneyView.swift */,
 			);
 			path = tetsudawaKnight;
 			sourceTree = "<group>";
@@ -266,8 +278,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				33E437DF1E022119001AE294 /* ViewController.swift in Sources */,
+				33EC74F01E14B158006A6635 /* AddTaskWithTemp.swift in Sources */,
+				332B65DF1E13B5D90054E99B /* Data.swift in Sources */,
 				79200C521E0B4F7E00DD3D7D /* Task.swift in Sources */,
 				79200C541E0B4FB200DD3D7D /* History.swift in Sources */,
+				33EC74F21E152F78006A6635 /* MoneyView.swift in Sources */,
+				332B65E11E13B9BF0054E99B /* TaskEdit.swift in Sources */,
 				33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
