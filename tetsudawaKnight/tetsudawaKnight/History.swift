@@ -1,20 +1,20 @@
 //
-//  ViewController.swift
+//  History.swift
 //  tetsudawaKnight
 //
-//  Created by Kaito Ishizuka on 2016/12/15.
+//  Created by YUUYA PC on 2016/12/22.
 //  Copyright © 2016年 Kaito Ishizuka. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class History: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
