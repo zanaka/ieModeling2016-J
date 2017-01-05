@@ -1,66 +1,44 @@
 //
-//  TaskEdit.swift
+//  TaskComp.swift
 //  tetsudawaKnight
 //
-//  Created by Kaito Ishizuka on 2016/12/28.
+//  Created by Kaito Ishizuka on 2016/12/30.
 //  Copyright © 2016年 Kaito Ishizuka. All rights reserved.
 //
 
 import UIKit
 
-class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+    var receiveCellText :String = ""
+    var receiveCellYen: Int = 0
     
-
-    @IBOutlet weak var taskTableView: UITableView!
-    var currentCellText : String = ""
+    @IBOutlet weak var taskName: UILabel!
+    @IBOutlet weak var taskSetTable: UITableView!
     
-     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (taskList.count)
+        return (1)
     }
-    
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
-        cell.textLabel?.text = taskList[indexPath.row].name
-        
+        let cell = taskSetTable.dequeueReusableCell(withIdentifier: "taskSettingCell") as! TaskSetCell
+        //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
+        cell.taskSetName.text = taskList[indexPath.row].name
+        cell.setAmount.placeholder = String(receiveCellYen)
         return(cell)
     }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == UITableViewCellEditingStyle.delete
-        {
-            taskList.remove(at: indexPath.row)
-            taskTableView.reloadData()
-        }
-    }
-    
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        currentCellText = taskList[indexPath.row].name
-        performSegue(withIdentifier: "toTaskComp", sender: nil)
-        taskTableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toTaskComp"
-        {
-
-            let taskComp:TaskComp = segue.destination as! TaskComp
-            taskComp.receiveCellText = currentCellText
-        }
+        
+        taskSetTable.deselectRow(at: indexPath, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskName.text = receiveCellText
+//        taskYen.text = String(receiveCellYen)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
