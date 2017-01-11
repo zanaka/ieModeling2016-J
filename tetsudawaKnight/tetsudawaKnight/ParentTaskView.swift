@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TaskView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     @IBOutlet weak var taskTableView: UITableView!

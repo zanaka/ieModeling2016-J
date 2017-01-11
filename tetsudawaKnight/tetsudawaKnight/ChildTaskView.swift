@@ -66,15 +66,15 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
         cell.accessoryType = .detailButton
-           cell.textLabel?.text = list[indexPath.row]
-        cell.detailTextLabel?.text = price[indexPath.row]
+        cell.textLabel?.text = taskList[indexPath.row].name
+        cell.detailTextLabel?.text = taskList[indexPath.row].name
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // セルの数を設定
-        return list.count
+        return taskList.count
     }
     
     // MARK: - UITableViewDelegate
