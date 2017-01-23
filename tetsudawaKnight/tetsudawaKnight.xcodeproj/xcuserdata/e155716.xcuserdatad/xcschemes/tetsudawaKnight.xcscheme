@@ -17,7 +17,7 @@
                BlueprintIdentifier = "33E437D81E022118001AE294"
                BuildableName = "tetsudawaKnight.app"
                BlueprintName = "tetsudawaKnight"
-               ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
+               ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "33E437EC1E022119001AE294"
                BuildableName = "tetsudawaKnightTests.xctest"
                BlueprintName = "tetsudawaKnightTests"
-               ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
+               ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "33E437F71E022119001AE294"
                BuildableName = "tetsudawaKnightUITests.xctest"
                BlueprintName = "tetsudawaKnightUITests"
-               ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
+               ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "33E437D81E022118001AE294"
             BuildableName = "tetsudawaKnight.app"
             BlueprintName = "tetsudawaKnight"
-            ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
+            ReferencedContainer = "container:tetsudawaKnight.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

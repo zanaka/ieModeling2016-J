@@ -2,9 +2,8 @@
 //  Task+CoreDataProperties.swift
 //  tetsudawaKnight
 //
-//  Created by Kaito Ishizuka on 2017/01/22.
+//  Created by Kaito Ishizuka on 2017/01/23.
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
-//  This file was automatically generated and should not be edited.
 //
 
 import Foundation
@@ -17,6 +16,7 @@ extension Task {
         return NSFetchRequest<Task>(entityName: "Task");
     }
 
-    @NSManaged public var taskName: String?
     @NSManaged public var clearPrice: Int16
+    @NSManaged public var taskName: String?
+
 }

@@ -11,7 +11,7 @@ import UIKit
 class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     var receiveCellText :String = ""
-    var receiveCellYen: Int = 0
+    var receiveCellYen: Int16 = 0
     
     @IBOutlet weak var taskName: UILabel!
     @IBOutlet weak var taskSetTable: UITableView!

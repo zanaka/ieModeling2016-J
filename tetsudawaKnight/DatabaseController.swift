@@ -63,4 +63,28 @@ class DatabaseController {
             }
         }
     }
+    
+    class func reloadTask() {
+    let fetchRequest:NSFetchRequest<Task> = Task.fetchRequest()
+    do{
+        taskList.removeAll()
+        let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+        var i = 0
+        for result in searchResults as [Task]{
+            taskList.append(TaskStruct(name: result.taskName!, yen: Int16(result.clearPrice)))
+            i+=1
+        }
+    
+    }
+    catch{
+        }
+    }
+    
+    class func addTask(name: String, price: Int){
+        let task:Task = NSEntityDescription.insertNewObject(forEntityName: "Task", into: DatabaseController.getContext()) as! Task
+        task.taskName = name
+        task.clearPrice = Int16(price)
+        self.saveContext()
+    }
+
 }

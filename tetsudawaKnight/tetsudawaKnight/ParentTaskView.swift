@@ -15,15 +15,12 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var taskTableView: UITableView!
     
     var currentCellText : String = ""
-    var currentCellYen: Int = 0
-    
+    var currentCellYen: Int16 = 0
     
     
      public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        //return (taskList.count)
-
-        return ()
+        return (taskList.count)
     }
     
     
@@ -33,14 +30,17 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
         cell.taskName.text = taskList[indexPath.row].name
         cell.taskYen.text = String(taskList[indexPath.row].yen)
-        return(cell)
+        return cell
     }
+
+
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             taskList.remove(at: indexPath.row)
+            DatabaseController.reloadTask()
             taskTableView.reloadData()
         }
     }
@@ -65,7 +65,7 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let task:Task = ns
+        DatabaseController.reloadTask()
     }
     
     override func didReceiveMemoryWarning() {
