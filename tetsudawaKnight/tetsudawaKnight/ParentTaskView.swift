@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,9 +17,13 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
     var currentCellText : String = ""
     var currentCellYen: Int = 0
     
+    
+    
      public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (taskList.count)
+        //return (taskList.count)
+
+        return ()
     }
     
     
@@ -60,6 +65,7 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let task:Task = ns
     }
     
     override func didReceiveMemoryWarning() {

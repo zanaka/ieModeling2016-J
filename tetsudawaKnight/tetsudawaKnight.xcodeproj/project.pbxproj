@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */; };
+		3314E4E91E34EEA600AC3D4B /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4E71E34EEA600AC3D4B /* Task+CoreDataClass.swift */; };
+		3314E4EA1E34EEA600AC3D4B /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4E81E34EEA600AC3D4B /* Task+CoreDataProperties.swift */; };
+		3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */; };
 		33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437DC1E022119001AE294 /* AppDelegate.swift */; };
 		33E437DF1E022119001AE294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437DE1E022119001AE294 /* ViewController.swift */; };
 		33E437E21E022119001AE294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E437E01E022119001AE294 /* Main.storyboard */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		3314E4E71E34EEA600AC3D4B /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3314E4E81E34EEA600AC3D4B /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseController.swift; path = ../DatabaseController.swift; sourceTree = "<group>"; };
 		33E437D91E022119001AE294 /* tetsudawaKnight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tetsudawaKnight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E437DC1E022119001AE294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33E437DE1E022119001AE294 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3314E4ED1E34F15400AC3D4B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3314E4E71E34EEA600AC3D4B /* Task+CoreDataClass.swift */,
+				3314E4E81E34EEA600AC3D4B /* Task+CoreDataProperties.swift */,
+			);
+			name = CoreData;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		33E437D01E022118001AE294 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +131,8 @@
 		33E437DB1E022119001AE294 /* tetsudawaKnight */ = {
 			isa = PBXGroup;
 			children = (
+				3314E4ED1E34F15400AC3D4B /* CoreData */,
+				3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */,
 				33E437DC1E022119001AE294 /* AppDelegate.swift */,
 				79982D871E25C530009366DF /* AddTaskWithTemp.swift */,
 				33E437DE1E022119001AE294 /* ViewController.swift */,
@@ -127,6 +147,7 @@
 				33E437E31E022119001AE294 /* Assets.xcassets */,
 				33E437E51E022119001AE294 /* LaunchScreen.storyboard */,
 				33E437E81E022119001AE294 /* Info.plist */,
+				3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */,
 			);
 			path = tetsudawaKnight;
 			sourceTree = "<group>";
@@ -231,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33E437D41E022118001AE294 /* Build configuration list for PBXProject "tetsudawaKnight" */;
+			buildConfigurationList = 33E437D41E022118001AE294 /* Build configuration list for PBXProject "tetsudawaKnight" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -283,15 +304,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */,
 				79982D811E25C50A009366DF /* MoneyView.swift in Sources */,
 				79982D831E25C50A009366DF /* TaskCell.swift in Sources */,
 				79982D881E25C530009366DF /* AddTaskWithTemp.swift in Sources */,
 				79982D8C1E25CC46009366DF /* ParentTaskView.swift in Sources */,
 				79982D851E25C50A009366DF /* TaskSetCell.swift in Sources */,
+				3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */,
 				79982D841E25C50A009366DF /* TaskEdit.swift in Sources */,
 				79DCD0E71E13652800B63CF6 /* Data.swift in Sources */,
 				33E437DF1E022119001AE294 /* ViewController.swift in Sources */,
 				79DCD0E51E13601100B63CF6 /* ChildTaskView.swift in Sources */,
+				3314E4EA1E34EEA600AC3D4B /* Task+CoreDataProperties.swift in Sources */,
+				3314E4E91E34EEA600AC3D4B /* Task+CoreDataClass.swift in Sources */,
 				33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +417,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Debug;
 		};
@@ -433,7 +458,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -442,10 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tetsudawaKnight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.u-ryukyu.ie.tetsudawaKnight";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -458,6 +485,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.u-ryukyu.ie.tetsudawaKnight";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -519,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33E437D41E022118001AE294 /* Build configuration list for PBXProject "tetsudawaKnight" */ = {
+		33E437D41E022118001AE294 /* Build configuration list for PBXProject "tetsudawaKnight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33E437FF1E022119001AE294 /* Debug */,
@@ -556,6 +584,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = ../DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 33E437D11E022118001AE294 /* Project object */;
 }
