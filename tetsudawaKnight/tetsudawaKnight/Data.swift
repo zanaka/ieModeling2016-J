@@ -13,9 +13,9 @@ import Foundation
 struct TaskStruct
 {
     var name :String = "task"
-    var yen : Int = 100
+    var yen : Int16 = 100
     
-    init(name :String, yen :Int)
+    init(name :String, yen :Int16)
     {
         self.name = name
         self.yen = yen
