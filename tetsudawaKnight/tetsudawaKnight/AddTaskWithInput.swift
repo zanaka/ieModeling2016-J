@@ -15,6 +15,7 @@ class AddTaskWithInput: UIViewController{
     @IBOutlet weak var addTaskPrice: UITextField!
     
     @IBAction func addTask(_ sender: Any) {
+        
         DatabaseController.addTask(name: addTaskName.text!, price: Int(addTaskPrice.text!)!)
         DatabaseController.saveContext()
     }

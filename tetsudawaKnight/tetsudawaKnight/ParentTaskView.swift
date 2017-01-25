@@ -39,7 +39,8 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            taskList.remove(at: indexPath.row)
+            DatabaseController.deleteTask(id: taskList[indexPath.row].id)
+            DatabaseController.saveContext()
             DatabaseController.reloadTask()
             taskTableView.reloadData()
         }

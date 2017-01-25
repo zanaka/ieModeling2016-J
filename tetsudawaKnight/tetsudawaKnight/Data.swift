@@ -14,19 +14,19 @@ struct TaskStruct
 {
     var name :String = "task"
     var yen : Int16 = 100
+    var id : String = "id"
     
-    init(name :String, yen :Int16)
+    init(name :String, yen :Int16, id :String)
     {
         self.name = name
         self.yen = yen
+        self.id = id
     }
 }
 
 var taskList: [TaskStruct] =
 [
-    TaskStruct(name: "掃除する", yen: 100),
-    TaskStruct(name: "食器洗い", yen: 200),
-    TaskStruct(name: "肩もみ", yen: 50)
+
 ]
 
 var money = 1000
