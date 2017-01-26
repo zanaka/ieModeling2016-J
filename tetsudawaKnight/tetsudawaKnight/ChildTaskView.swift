@@ -1,102 +1,77 @@
 //
-//  ChildTaskView.swift
+//  TaskClear.swift
 //  tetsudawaKnight
 //
-//  Created by YUUYA PC on 2016/12/28.
-//  Copyright © 2016年 Kaito Ishizuka. All rights reserved.
-//
-
-//
-//  Task.swift
-//  tetsudawaKnight
-//
-//  Created by YUUYA PC on 2016/12/22.
+//  Created by Kaito Ishizuka on 2016/12/28.
 //  Copyright © 2016年 Kaito Ishizuka. All rights reserved.
 //
 
 import UIKit
 
-
 class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    // ステータスバーの高さ
-    let statusBarHeight = UIApplication.shared.statusBarFrame.height
-    
+    // 合計金額の表示
+
+    @IBOutlet weak var MoneyLabel: UILabel!
+    @IBOutlet weak var taskTableView: UITableView!
+
     override func viewDidLoad() {
         
-        // 合計金額の表示
         super.viewDidLoad()
         MoneyLabel.text = String(money)
-        
-        
-        super.viewDidLoad()
-        
-        // UITableView を作成
-        let tableView = UITableView()
-        
-        // サイズと位置調整
-        /*
-        tableView.frame = CGRect(
-            x: 0,
-            y: statusBarHeight,
-            width: self.view.frame.width,
-            height: self.view.frame.height - statusBarHeight
-        )
-        */
-        
-        // Delegate設定
-        tableView.delegate = self
-        
-        // DataSource設定
-        tableView.dataSource = self
-        
-        // 画面に UITableView を追加
-        self.view.addSubview(tableView)
     }
     
+    
+    
+    var currentCellText : String = ""
+    var currentCellYen: Int = 0
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return (taskList.count)
+    }
+    
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = taskTableView.dequeueReusableCell(withIdentifier: "taskcell") as! TaskCell
+        //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
+        cell.taskName.text = taskList[indexPath.row].name
+        cell.taskYen.text = String(taskList[indexPath.row].yen)
+        return(cell)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            taskList.remove(at: indexPath.row)
+            taskTableView.reloadData()
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        currentCellText = taskList[indexPath.row].name
+        currentCellYen = Int(taskList[indexPath.row].yen)
+        performSegue(withIdentifier: "ToTaskClear", sender: nil)
+        taskTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ToTaskClear"
+        {
+            let tc:TaskComp = segue.destination as! TaskComp
+            tc.receiveCellText = currentCellText
+            tc.receiveCellYen = currentCellYen
+        }
+    }
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - UITableViewDataSource
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // セルを作る
-        
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
-        cell.accessoryType = .detailButton
-        cell.textLabel?.text = taskList[indexPath.row].name
-        cell.detailTextLabel?.text = taskList[indexPath.row].name
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // セルの数を設定
-        return taskList.count
-    }
-    
-    // MARK: - UITableViewDelegate
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // セルがタップされた時の処理
-        print("タップされたセルのindex番号: \(indexPath.row)")
-    }
-    
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // セルの高さを設定
-        return 64
-    }
-    */
-    
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        // アクセサリボタン（セルの右にあるボタン）がタップされた時の処理
-        print("タップされたアクセサリがあるセルのindex番号: \(indexPath.row)")
-    }
-    
-    @IBOutlet weak var MoneyLabel: UILabel!
-
     
 }
