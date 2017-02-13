@@ -38,4 +38,5 @@ var HisTaskList: [TaskStruct] =
 
 
 var money = 1000
+var pass = "0000"
 var payHistoryList = ["100"]

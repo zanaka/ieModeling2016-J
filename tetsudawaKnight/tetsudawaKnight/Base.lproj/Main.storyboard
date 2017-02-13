@@ -773,7 +773,7 @@
         <!--PASS-->
         <scene sceneID="cnz-tS-4xX">
             <objects>
-                <viewController title="PASS" id="fcA-od-Cmk" sceneMemberID="viewController">
+                <viewController title="PASS" id="fcA-od-Cmk" customClass="PASS" customModule="tetsudawaKnight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9pO-jR-qzO"/>
                         <viewControllerLayoutGuide type="bottom" id="nmK-16-b0r"/>
@@ -837,12 +837,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="×"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeD-hE-HhJ">
-                                <rect key="frame" x="16" y="349" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                                <state key="normal" title="⑦"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5k-Z0-YXf">
                                 <rect key="frame" x="110" y="133" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -868,13 +862,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="90"/>
                                 <state key="normal" title="←"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeD-hE-HhJ">
+                                <rect key="frame" x="16" y="349" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <state key="normal" title="⑦"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="plus1" destination="qC9-pN-1TO" id="9t0-C7-5No"/>
+                        <outlet property="put0" destination="MDB-7o-qTD" id="Njp-8Z-0dL"/>
+                        <outlet property="put1" destination="qC9-pN-1TO" id="okg-D5-xlo"/>
+                        <outlet property="put2" destination="y5k-Z0-YXf" id="w1p-OC-9jK"/>
+                        <outlet property="put3" destination="cTk-eM-he1" id="saP-jI-Egi"/>
+                        <outlet property="put4" destination="cTk-eM-he1" id="J0D-nH-urS"/>
+                        <outlet property="put5" destination="2qX-dV-Rs5" id="1B6-s7-KvA"/>
+                        <outlet property="put6" destination="lAl-T3-thd" id="KZ4-U4-5Rw"/>
+                        <outlet property="put7" destination="qeD-hE-HhJ" id="dat-pa-JPy"/>
+                        <outlet property="put8" destination="bNQ-Jg-xHf" id="XpJ-8d-6rE"/>
+                        <outlet property="put9" destination="HjL-f9-fFb" id="59c-VL-l4h"/>
+                        <outlet property="putb" destination="aSn-m5-fXe" id="y81-n1-K7f"/>
+                        <outlet property="puty" destination="Fbc-x3-nas" id="aAE-z3-Ncd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qa6-gl-A6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="150" y="1069"/>
+            <point key="canvasLocation" x="150" y="1068"/>
         </scene>
         <!--History-->
         <scene sceneID="oW2-OM-aAD">
@@ -913,15 +928,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="vcn-Ug-OoV" kind="show" identifier="to task Uncomp" id="X4d-b7-UXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gQ-Yf-x4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2169.375" y="2659.8591549295775"/>
         </scene>
-        <!--taskComp-->
+        <!--taskUncomp-->
         <scene sceneID="4Sm-Af-for">
             <objects>
-                <viewController title="taskComp" id="vcn-Ug-OoV" customClass="TaskComp" customModule="tetsudawaKnight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="taskUncomp" id="vcn-Ug-OoV" customClass="TaskComp" customModule="tetsudawaKnight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lHU-gz-U0i"/>
                         <viewControllerLayoutGuide type="bottom" id="IsQ-5e-fOV"/>
@@ -963,7 +981,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="タスク完了報告" id="niq-Th-QJm"/>
+                    <navigationItem key="navigationItem" title="タスク完了取り消し" id="Z9s-F1-YBz"/>
                     <connections>
                         <outlet property="Taskname" destination="JHS-vK-QW4" id="nQM-cs-LTg"/>
                         <outlet property="Taskyen" destination="awX-K9-uda" id="EIE-Xv-Bdv"/>
