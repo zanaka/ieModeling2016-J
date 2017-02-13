@@ -1,5 +1,5 @@
 //
-//  Task+CoreDataClass.swift
+//  User+CoreDataClass.swift
 //  tetsudawaKnight
 //
 //  Created by Kaito Ishizuka on 2017/02/13.
@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class Task: NSManagedObject {
+public class User: NSManagedObject {
 
 }
