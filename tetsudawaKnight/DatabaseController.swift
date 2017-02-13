@@ -110,16 +110,42 @@ class DatabaseController {
         self.saveContext()
     }
     
-    class func getTask(id :String) -> Task  {
+    class func getTask(id :String) -> TaskStruct  {
+        var receiveTask : TaskStruct = TaskStruct.init(name: "task", yen: 100, id: "aaaa", isComp: false)
         let getRequest:NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", id)
         getRequest.predicate = predicate
         do{
             let searchResults = try DatabaseController.getContext().fetch(getRequest)
             for result in searchResults as [Task]{
-                return result
+                receiveTask.id = result.id!
+                receiveTask.isComp = result.isComp
+                receiveTask.name = result.taskName!
+                receiveTask.yen = result.clearPrice
             }
-
+        }
+        catch{}
+        return receiveTask
+    }
+    
+    class func editTask(searchId :String, chengeName :String, chengePrice :Int16, chengeIsComp: Bool){
+        let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", searchId)
+        deleteRequest.predicate = predicate
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(deleteRequest)
+            for result in searchResults as! [Task]{
+                let record = result as! NSManagedObject
+                record.setValue(chengeName, forKey: "taskName")
+                record.setValue(chengePrice, forKey: "clearPrice")
+                record.setValue(chengeIsComp, forKey: "isComp")
+            }
+        }
+        catch{
+            
+        }
+    }
+    
     class func clearTask(id :String){
         let clearRequest:NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", id)

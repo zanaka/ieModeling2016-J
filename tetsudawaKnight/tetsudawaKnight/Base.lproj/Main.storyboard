@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nvk-ym-Yeh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nvk-ym-Yeh">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -223,63 +224,6 @@
             </objects>
             <point key="canvasLocation" x="1178" y="-406"/>
         </scene>
-        <!--テンプレートから追加-->
-        <scene sceneID="uff-lH-cfR">
-            <objects>
-                <viewController title="テンプレートから追加" id="zUQ-IA-mfH" customClass="AddTaskWithTemp" customModule="tetsudawaKnight" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RYq-3s-FeI"/>
-                        <viewControllerLayoutGuide type="bottom" id="nRz-NM-j6t"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h7m-j4-XsX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3z9-lr-I4v">
-                                <rect key="frame" x="0.0" y="106" width="320" height="304"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lxs-2p-9HC">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="taskTempCell" reuseIdentifier="taskTempCell" id="WeN-wx-VvU">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="zUQ-IA-mfH" id="xwf-l1-5tB"/>
-                                </connections>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1j-kr-JXx">
-                                <rect key="frame" x="93" y="418" width="134" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="自分で入力する"/>
-                                <connections>
-                                    <segue destination="2dz-35-HJz" kind="show" id="8cU-AK-cJR">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="tempCollection" destination="3z9-lr-I4v" id="goV-uO-Rgj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Cd-1K-Ekl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2910" y="329"/>
-        </scene>
         <!--タスク編集-->
         <scene sceneID="S7k-Mu-TrW">
             <objects>
@@ -292,63 +236,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="43R-DA-tQ4">
-                                <rect key="frame" x="0.0" y="153" width="320" height="366"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="taskSetCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskSettingCell" id="hqu-RR-cNO" customClass="TaskSetCell" customModule="tetsudawaKnight" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hqu-RR-cNO" id="2qH-l0-aQc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="設定する値" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cu4-Ao-mnR">
-                                                    <rect key="frame" x="185" y="6" width="127" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク設定名" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udv-F5-jFh">
-                                                    <rect key="frame" x="23" y="11" width="154" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="setAmount" destination="cu4-Ao-mnR" id="Yfa-YT-BPT"/>
-                                            <outlet property="taskSetName" destination="udv-F5-jFh" id="aA7-YZ-zUz"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="I4D-QM-qYQ" id="Ff7-AQ-zKo"/>
-                                    <outlet property="delegate" destination="I4D-QM-qYQ" id="ixK-Kx-TDk"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="受け取ったタスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-x9-L22">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受け取ったタスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-x9-L22">
                                 <rect key="frame" x="19" y="91" width="283" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タスク名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-K4-bHq">
+                                <rect key="frame" x="50" y="207" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="zko-oR-iJx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kyN-zu-dFn">
+                                <rect key="frame" x="136" y="202" width="150" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-o0-w1j">
+                                <rect key="frame" x="271" y="278" width="15" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="eUR-gO-oUh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAi-Xa-Nfm">
+                                <rect key="frame" x="136" y="269" width="127" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もらえるお金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mL-HL-G4s">
+                                <rect key="frame" x="16" y="274" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-Fr-ik3">
+                                <rect key="frame" x="128" y="386" width="62" height="101"/>
+                                <state key="normal" title="変更する"/>
+                                <connections>
+                                    <action selector="CommitChenges:" destination="I4D-QM-qYQ" eventType="touchUpInside" id="12Y-Vq-7nU"/>
+                                    <segue destination="Ohy-qx-qMS" kind="show" id="KC9-ea-2J2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タスクの状態" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnV-I8-WXW">
+                                <rect key="frame" x="16" y="357" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-Q6-d5D">
+                                <rect key="frame" x="136" y="348" width="121" height="29"/>
+                                <segments>
+                                    <segment title="完了"/>
+                                    <segment title="未完了"/>
+                                </segments>
+                                <connections>
+                                    <action selector="taskIsComp:" destination="I4D-QM-qYQ" eventType="valueChanged" id="1j7-bf-B1H"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kyN-zu-dFn" firstAttribute="leading" secondItem="YAi-Xa-Nfm" secondAttribute="leading" id="29t-7j-8vA"/>
+                            <constraint firstItem="2mL-HL-G4s" firstAttribute="top" secondItem="KDE-K4-bHq" secondAttribute="bottom" constant="46" id="2op-v8-YOQ"/>
+                            <constraint firstItem="kyN-zu-dFn" firstAttribute="top" secondItem="gvB-x9-L22" secondAttribute="bottom" constant="79" id="8bg-R4-8uh"/>
+                            <constraint firstItem="gvB-x9-L22" firstAttribute="centerX" secondItem="rnQ-N2-UPf" secondAttribute="centerX" id="Bc4-zY-ftX"/>
+                            <constraint firstItem="L7W-Fr-ik3" firstAttribute="leading" secondItem="rnQ-N2-UPf" secondAttribute="leading" constant="128" id="K6r-yr-Bfz"/>
+                            <constraint firstItem="L7W-Fr-ik3" firstAttribute="top" secondItem="JnV-I8-WXW" secondAttribute="bottom" constant="8" symbolic="YES" id="KPx-dQ-4Fq"/>
+                            <constraint firstItem="YAi-Xa-Nfm" firstAttribute="leading" secondItem="2mL-HL-G4s" secondAttribute="trailing" constant="8" symbolic="YES" id="Omy-rW-CNz"/>
+                            <constraint firstItem="gvB-x9-L22" firstAttribute="top" secondItem="rdN-Zi-ZqF" secondAttribute="bottom" constant="27" id="PAU-FZ-4Qv"/>
+                            <constraint firstItem="kyN-zu-dFn" firstAttribute="leading" secondItem="KDE-K4-bHq" secondAttribute="trailing" constant="8" symbolic="YES" id="PXW-gw-ftG"/>
+                            <constraint firstItem="2mL-HL-G4s" firstAttribute="centerY" secondItem="rnQ-N2-UPf" secondAttribute="centerY" id="QUL-A5-NBg"/>
+                            <constraint firstItem="iRM-Q4-fsS" firstAttribute="top" secondItem="L7W-Fr-ik3" secondAttribute="bottom" constant="32" id="W6v-iW-esd"/>
+                            <constraint firstItem="YAi-Xa-Nfm" firstAttribute="top" secondItem="kyN-zu-dFn" secondAttribute="bottom" constant="37" id="Zq9-Mc-I2t"/>
+                            <constraint firstItem="2mL-HL-G4s" firstAttribute="leading" secondItem="rnQ-N2-UPf" secondAttribute="leadingMargin" id="bBV-V1-Bru"/>
+                            <constraint firstItem="aAC-Q6-d5D" firstAttribute="leading" secondItem="JnV-I8-WXW" secondAttribute="trailing" constant="3" id="c0f-Ig-NbE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aAC-Q6-d5D" secondAttribute="trailing" constant="47" id="c7w-rQ-W9u"/>
+                            <constraint firstItem="kyN-zu-dFn" firstAttribute="trailing" secondItem="wWh-o0-w1j" secondAttribute="trailing" id="dRR-YD-wgh"/>
+                            <constraint firstItem="YAi-Xa-Nfm" firstAttribute="bottom" secondItem="wWh-o0-w1j" secondAttribute="bottom" id="f60-c5-eep"/>
+                            <constraint firstItem="KDE-K4-bHq" firstAttribute="leading" secondItem="rnQ-N2-UPf" secondAttribute="leadingMargin" constant="34" id="fXJ-Eh-Hwp"/>
+                            <constraint firstItem="gvB-x9-L22" firstAttribute="leading" secondItem="rnQ-N2-UPf" secondAttribute="leadingMargin" constant="3" id="feF-9q-6x7"/>
+                            <constraint firstItem="KDE-K4-bHq" firstAttribute="centerY" secondItem="kyN-zu-dFn" secondAttribute="centerY" id="fpb-Z7-kuH"/>
+                            <constraint firstItem="2mL-HL-G4s" firstAttribute="leading" secondItem="JnV-I8-WXW" secondAttribute="leading" id="kqq-g5-kSa"/>
+                            <constraint firstItem="2mL-HL-G4s" firstAttribute="centerY" secondItem="YAi-Xa-Nfm" secondAttribute="centerY" id="oCB-5k-JND"/>
+                            <constraint firstItem="YAi-Xa-Nfm" firstAttribute="leading" secondItem="aAC-Q6-d5D" secondAttribute="leading" id="qnk-og-Ki2"/>
+                            <constraint firstItem="L7W-Fr-ik3" firstAttribute="top" secondItem="aAC-Q6-d5D" secondAttribute="bottom" constant="10" id="tIF-ck-Vgv"/>
+                            <constraint firstItem="JnV-I8-WXW" firstAttribute="top" secondItem="2mL-HL-G4s" secondAttribute="bottom" constant="62" id="uST-Uw-nnj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kyN-zu-dFn" secondAttribute="trailing" constant="18" id="uwH-WL-Za9"/>
+                            <constraint firstItem="wWh-o0-w1j" firstAttribute="leading" secondItem="YAi-Xa-Nfm" secondAttribute="trailing" constant="8" symbolic="YES" id="v43-2v-6gO"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearPriceSetLabel" destination="YAi-Xa-Nfm" id="FGQ-p1-cFu"/>
+                        <outlet property="nameSetLabel" destination="kyN-zu-dFn" id="0FY-oE-aKT"/>
+                        <outlet property="taskIsCompControll" destination="aAC-Q6-d5D" id="Q5Q-4I-xYm"/>
                         <outlet property="taskName" destination="gvB-x9-L22" id="DJE-hd-6eq"/>
-                        <outlet property="taskSetTable" destination="43R-DA-tQ4" id="ywW-0w-afQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvv-9f-YVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="1069"/>
+            <point key="canvasLocation" x="2910" y="1067.9577464788733"/>
         </scene>
         <!--入力して追加-->
         <scene sceneID="pW1-UP-fdx">
@@ -403,6 +398,7 @@
                                 <state key="normal" title="追加"/>
                                 <connections>
                                     <action selector="addTask:" destination="2dz-35-HJz" eventType="touchUpInside" id="co1-z0-aek"/>
+                                    <segue destination="Ohy-qx-qMS" kind="show" id="Csx-Y0-Wv4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -415,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzf-WD-cIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3787.5" y="328.52112676056339"/>
+            <point key="canvasLocation" x="3101" y="330"/>
         </scene>
         <!--タスク一覧-->
         <scene sceneID="ZCB-5Q-87w">
@@ -513,12 +509,11 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YtO-Th-EvX">
                             <connections>
-                                <segue destination="zUQ-IA-mfH" kind="show" id="dqz-a3-Kxp">
-                                    <nil key="action"/>
-                                </segue>
+                                <segue destination="2dz-35-HJz" kind="show" id="gK3-pT-8KD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="taskTableView" destination="jdv-t3-nSi" id="7n9-bH-aqC"/>
@@ -585,7 +580,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="iSZ-li-WyM">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-hL-7f8" userLabel="MoneyLabel">
@@ -998,7 +993,8 @@
         <image name="達成エフェクト 未完成" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jLA-WP-2jd"/>
+        <segue reference="KC9-ea-2J2"/>
+        <segue reference="v0u-nL-PhJ"/>
         <segue reference="3pm-BH-1Y7"/>
     </inferredMetricsTieBreakers>
 </document>

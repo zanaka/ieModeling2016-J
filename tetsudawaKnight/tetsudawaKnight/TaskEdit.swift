@@ -8,39 +8,51 @@
 
 import UIKit
 
-class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource
+class TaskEdit: UIViewController
 {
     var receiveTaskId :String = ""
-    var receiveCellText :String = ""
-    var receiveCellYen: Int16 = 0
+    var taskIsComp :Bool = false
+    var task: TaskStruct = TaskStruct.init(name: "task", yen: 100, id: "aaa", isComp: false)
     
     @IBOutlet weak var taskName: UILabel!
-    @IBOutlet weak var taskSetTable: UITableView!
+    @IBOutlet weak var nameSetLabel: UITextField!
+    @IBOutlet weak var clearPriceSetLabel: UITextField!
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return (1)
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = taskSetTable.dequeueReusableCell(withIdentifier: "taskSettingCell") as! TaskSetCell
-        //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
-        cell.taskSetName.text = taskList[indexPath.row].name
-        cell.setAmount.placeholder = String(receiveCellYen)
-        return(cell)
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
+    @IBOutlet weak var taskIsCompControll: UISegmentedControl!
+    @IBAction func taskIsComp(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            taskIsComp = true
+            break
+            
+        case 1:
+            taskIsComp = false
+            break
+            
+        default:
+            /* do nothing */
+            break
+        }
         
-        taskSetTable.deselectRow(at: indexPath, animated: true)
+    }
 
+    @IBAction func CommitChenges(_ sender: Any) {
+        DatabaseController.editTask(searchId: task.id, chengeName: nameSetLabel.text!, chengePrice: Int16(clearPriceSetLabel.text!)!, chengeIsComp: taskIsComp)
+        DatabaseController.saveContext()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var task = DatabaseController.getTask(id: receiveTaskId)
-        taskName.text = receiveCellText
+        task = DatabaseController.getTask(id: receiveTaskId)
+        taskName.text = task.name
+        taskIsComp = task.isComp
+        if taskIsComp == true {
+            taskIsCompControll.selectedSegmentIndex = 0
+        }else{
+            taskIsCompControll.selectedSegmentIndex = 1
+        }
+        nameSetLabel.text = task.name
+        clearPriceSetLabel.text = String(task.yen)
+        
     }
 }
