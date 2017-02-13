@@ -108,6 +108,23 @@ class DatabaseController {
         self.saveContext()
     }
     
+    class func getTask(id :String) -> Task  {
+        let getRequest:NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", id)
+        getRequest.predicate = predicate
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(getRequest)
+            for result in searchResults as [Task]{
+                return result
+            }
+        }
+        catch{
+            
+        }
+        return 
+    }
+
+    
     class func deleteTask(id :String){
         let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", id)

@@ -35,11 +35,12 @@ class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource
     {
         
         taskSetTable.deselectRow(at: indexPath, animated: true)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var task = DatabaseController.getTask(id: receiveTaskId)
         taskName.text = receiveCellText
     }
 }
