@@ -69,8 +69,10 @@ class DatabaseController {
     do{
         taskList.removeAll()
         let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+        let predicate = NSPredicate(format: "isComp == false")
+        fetchRequest.predicate = predicate
         for result in searchResults as [Task]{
-            DatabaseController.getContext().delete(result)
+            // DatabaseController.getContext().delete(result)
             taskList.append(TaskStruct(name: result.taskName!, yen: Int16(result.clearPrice), id: result.id!, isComp: result.isComp))
         }
     
@@ -117,13 +119,18 @@ class DatabaseController {
             for result in searchResults as [Task]{
                 return result
             }
+
+    class func clearTask(id :String){
+        let clearRequest:NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", id)
+        clearRequest.predicate = predicate
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(clearRequest)
         }
         catch{
             
         }
-        return 
     }
-
     
     class func deleteTask(id :String){
         let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()

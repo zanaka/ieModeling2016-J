@@ -1,16 +1,18 @@
 //
-//  TaskComp.swift
+//  TaskUncomp.swift
 //  tetsudawaKnight
 //
-//  Created by YUUYA PC on 2017/01/12.
+//  Created by YUUYA PC on 2017/02/13.
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
 //
 
+import Foundation
+
 import UIKit
 
-class TaskComp: UIViewController {
+class TaskUncomp: UIViewController {
     
-
+    
     
     var receiveCellText : String = "タスク名"
     var receiveCellYen : Int = 0
