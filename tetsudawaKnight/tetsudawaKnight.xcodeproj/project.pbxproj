@@ -21,6 +21,7 @@
 		33E437E71E022119001AE294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E437E51E022119001AE294 /* LaunchScreen.storyboard */; };
 		33E437F21E022119001AE294 /* tetsudawaKnightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437F11E022119001AE294 /* tetsudawaKnightTests.swift */; };
 		33E437FD1E022119001AE294 /* tetsudawaKnightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437FC1E022119001AE294 /* tetsudawaKnightUITests.swift */; };
+		79075CCD1E517BBE0038D610 /* PASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CCC1E517BBE0038D610 /* PASS.swift */; };
 		79982D811E25C50A009366DF /* MoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79982D7B1E25C50A009366DF /* MoneyView.swift */; };
 		79982D831E25C50A009366DF /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79982D7D1E25C50A009366DF /* TaskCell.swift */; };
 		79982D841E25C50A009366DF /* TaskEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79982D7E1E25C50A009366DF /* TaskEdit.swift */; };
@@ -72,6 +73,7 @@
 		33E437FC1E022119001AE294 /* tetsudawaKnightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetsudawaKnightUITests.swift; sourceTree = "<group>"; };
 		33E437FE1E022119001AE294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33FE59221E3747F900450C62 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		79075CCC1E517BBE0038D610 /* PASS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PASS.swift; path = ../PASS.swift; sourceTree = "<group>"; };
 		79982D7B1E25C50A009366DF /* MoneyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyView.swift; sourceTree = "<group>"; };
 		79982D7D1E25C50A009366DF /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		79982D7E1E25C50A009366DF /* TaskEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEdit.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				33FE59151E36FC0600450C62 /* parent */,
 				79AB08D11E396F420068B88A /* Child */,
 				3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */,
+				79075CCC1E517BBE0038D610 /* PASS.swift */,
 				33E437DC1E022119001AE294 /* AppDelegate.swift */,
 				79982D7D1E25C50A009366DF /* TaskCell.swift */,
 				79982D7F1E25C50A009366DF /* TaskSetCell.swift */,
@@ -340,6 +343,7 @@
 				79982D811E25C50A009366DF /* MoneyView.swift in Sources */,
 				79982D831E25C50A009366DF /* TaskCell.swift in Sources */,
 				79982D881E25C530009366DF /* AddTaskWithTemp.swift in Sources */,
+				79075CCD1E517BBE0038D610 /* PASS.swift in Sources */,
 				79982D8C1E25CC46009366DF /* ParentTaskView.swift in Sources */,
 				79982D851E25C50A009366DF /* TaskSetCell.swift in Sources */,
 				3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */,
