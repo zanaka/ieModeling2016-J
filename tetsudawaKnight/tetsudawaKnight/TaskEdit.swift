@@ -10,6 +10,7 @@ import UIKit
 
 class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+    var receiveTaskId :String = ""
     var receiveCellText :String = ""
     var receiveCellYen: Int16 = 0
     
@@ -38,7 +39,7 @@ class TaskEdit: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         taskName.text = receiveCellText
-//        taskYen.text = String(receiveCellYen)
     }
 }
