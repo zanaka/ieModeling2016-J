@@ -14,8 +14,7 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var taskTableView: UITableView!
     
-    var currentCellText : String = ""
-    var currentCellYen: Int16 = 0
+    var currentTaskId : String = ""
     
     
      public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -49,8 +48,7 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        currentCellText = taskList[indexPath.row].name
-        currentCellYen = taskList[indexPath.row].yen
+        currentTaskId = taskList[indexPath.row].id
         performSegue(withIdentifier: "toTaskEdit", sender: nil)
         taskTableView.deselectRow(at: indexPath, animated: true)
     }
@@ -59,8 +57,7 @@ class ParentTaskView: UIViewController, UITableViewDelegate, UITableViewDataSour
         if segue.identifier == "toTaskEdit"
         {
             let taskEdit:TaskEdit = segue.destination as! TaskEdit
-            taskEdit.receiveCellText = currentCellText
-            taskEdit.receiveCellYen = currentCellYen
+            taskEdit.receiveTaskId = currentTaskId
         }
     }
     

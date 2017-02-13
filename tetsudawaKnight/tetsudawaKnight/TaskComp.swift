@@ -10,6 +10,8 @@ import UIKit
 
 class TaskComp: UIViewController {
     
+
+    
     var receiveCellText : String = "タスク名"
     var receiveCellYen : Int = 0
     
@@ -17,6 +19,8 @@ class TaskComp: UIViewController {
     @IBOutlet weak var Taskyen: UILabel!
     
     override func viewDidLoad() {
+        
+        DatabaseController.reloadTask()
         
         super.viewDidLoad()
         Taskyen.text = String(receiveCellYen)

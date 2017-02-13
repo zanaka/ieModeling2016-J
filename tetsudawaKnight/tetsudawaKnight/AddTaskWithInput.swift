@@ -16,7 +16,7 @@ class AddTaskWithInput: UIViewController{
     
     @IBAction func addTask(_ sender: Any) {
         
-        DatabaseController.addTask(name: addTaskName.text!, price: Int(addTaskPrice.text!)!, isComp: false)
+        DatabaseController.addTask(name: addTaskName.text!, price: Int(addTaskPrice.text!)!, iscomp: false)
         DatabaseController.saveContext()
     }
     

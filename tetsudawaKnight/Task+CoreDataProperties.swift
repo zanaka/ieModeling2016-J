@@ -2,7 +2,7 @@
 //  Task+CoreDataProperties.swift
 //  tetsudawaKnight
 //
-//  Created by YUUYA PC on 2017/02/13.
+//  Created by Kaito Ishizuka on 2017/02/13.
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
 //
 
