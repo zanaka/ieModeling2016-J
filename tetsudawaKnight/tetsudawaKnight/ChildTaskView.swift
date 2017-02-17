@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // 合計金額の表示
-    
-    @IBOutlet weak var MoneyLabel: UILabel!
-    
+        
     
     @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
@@ -34,7 +33,7 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = taskTableView.dequeueReusableCell(withIdentifier: "histaskcell") as! TaskCell
+        let cell = taskTableView.dequeueReusableCell(withIdentifier: "histtaskcell") as! TaskCell
         //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
         cell.taskName.text = HisTaskList[indexPath.row].name
         cell.taskYen.text = String(HisTaskList[indexPath.row].yen)
