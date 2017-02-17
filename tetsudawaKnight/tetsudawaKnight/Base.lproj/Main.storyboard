@@ -106,11 +106,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="設定" id="lE6-9Q-kX1">
-                                        <barButtonItem key="leftBarButtonItem" title="親" id="DjZ-9f-dio">
-                                            <connections>
-                                                <segue destination="Eyu-Rz-Pat" kind="modal" modalTransitionStyle="crossDissolve" id="A32-3D-ndh"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="親" id="DjZ-9f-dio"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -134,7 +130,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="設定" image="丸" id="swo-b4-MAO"/>
                     <navigationItem key="navigationItem" title="設定" id="pr0-Qs-rUN">
-                        <barButtonItem key="leftBarButtonItem" title="親" id="9II-IA-zZH"/>
+                        <barButtonItem key="leftBarButtonItem" title="親" id="9II-IA-zZH">
+                            <connections>
+                                <segue destination="Eyu-Rz-Pat" kind="modal" id="mMf-O1-lXO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbT-Dx-Ygf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1235,7 +1235,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Z0v-Td-O3K"/>
         <segue reference="Y4b-9v-bVo"/>
-        <segue reference="Ppx-ag-MKa"/>
+        <segue reference="mMf-O1-lXO"/>
         <segue reference="3TV-fD-fOx"/>
     </inferredMetricsTieBreakers>
 </document>
