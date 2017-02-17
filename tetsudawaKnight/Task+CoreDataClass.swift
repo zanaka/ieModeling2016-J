@@ -2,7 +2,7 @@
 //  Task+CoreDataClass.swift
 //  tetsudawaKnight
 //
-//  Created by Kaito Ishizuka on 2017/02/13.
+//  Created by Kaito Ishizuka on 2017/02/17.
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
 //
 

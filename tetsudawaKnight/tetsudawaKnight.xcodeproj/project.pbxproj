@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330E84791E56B76800171988 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84751E56B76800171988 /* Task+CoreDataClass.swift */; };
+		330E847A1E56B76800171988 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84761E56B76800171988 /* Task+CoreDataProperties.swift */; };
+		330E847B1E56B76800171988 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84771E56B76800171988 /* User+CoreDataClass.swift */; };
+		330E847C1E56B76800171988 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84781E56B76800171988 /* User+CoreDataProperties.swift */; };
+		330E847F1E56BDE900171988 /* Model_for_v2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */; };
 		3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */; };
 		3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */; };
-		334EE95B1E51584E007441BF /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EE9571E51584E007441BF /* Task+CoreDataClass.swift */; };
-		334EE95C1E51584E007441BF /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EE9581E51584E007441BF /* Task+CoreDataProperties.swift */; };
-		334EE95D1E51584E007441BF /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EE9591E51584E007441BF /* User+CoreDataClass.swift */; };
-		334EE95E1E51584E007441BF /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334EE95A1E51584E007441BF /* User+CoreDataProperties.swift */; };
 		3387937B1E361C37008FD3D5 /* AddTaskWithInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387937A1E361C37008FD3D5 /* AddTaskWithInput.swift */; };
 		33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437DC1E022119001AE294 /* AppDelegate.swift */; };
 		33E437DF1E022119001AE294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437DE1E022119001AE294 /* ViewController.swift */; };
@@ -54,12 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330E84751E56B76800171988 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		330E84761E56B76800171988 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		330E84771E56B76800171988 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		330E84781E56B76800171988 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		330E847D1E56B92600171988 /* DataModel_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel_v2.xcdatamodel; sourceTree = "<group>"; };
+		330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model_for_v2.xcmappingmodel; sourceTree = "<group>"; };
 		3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseController.swift; path = ../DatabaseController.swift; sourceTree = "<group>"; };
-		334EE9571E51584E007441BF /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		334EE9581E51584E007441BF /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		334EE9591E51584E007441BF /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		334EE95A1E51584E007441BF /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3387937A1E361C37008FD3D5 /* AddTaskWithInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskWithInput.swift; sourceTree = "<group>"; };
 		33E437D91E022119001AE294 /* tetsudawaKnight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tetsudawaKnight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E437DC1E022119001AE294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,10 +121,10 @@
 		3314E4ED1E34F15400AC3D4B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				334EE9571E51584E007441BF /* Task+CoreDataClass.swift */,
-				334EE9581E51584E007441BF /* Task+CoreDataProperties.swift */,
-				334EE9591E51584E007441BF /* User+CoreDataClass.swift */,
-				334EE95A1E51584E007441BF /* User+CoreDataProperties.swift */,
+				330E84751E56B76800171988 /* Task+CoreDataClass.swift */,
+				330E84761E56B76800171988 /* Task+CoreDataProperties.swift */,
+				330E84771E56B76800171988 /* User+CoreDataClass.swift */,
+				330E84781E56B76800171988 /* User+CoreDataProperties.swift */,
 			);
 			name = CoreData;
 			path = ..;
@@ -130,6 +133,7 @@
 		33E437D01E022118001AE294 = {
 			isa = PBXGroup;
 			children = (
+				330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */,
 				33E437DB1E022119001AE294 /* tetsudawaKnight */,
 				33E437F01E022119001AE294 /* tetsudawaKnightTests */,
 				33E437FB1E022119001AE294 /* tetsudawaKnightUITests */,
@@ -345,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330E847A1E56B76800171988 /* Task+CoreDataProperties.swift in Sources */,
 				79075CD11E517E050038D610 /* TaskUncomp.swift in Sources */,
 				3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */,
 				79982D811E25C50A009366DF /* MoneyView.swift in Sources */,
@@ -356,15 +361,15 @@
 				79982D851E25C50A009366DF /* TaskSetCell.swift in Sources */,
 				3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */,
 				79982D841E25C50A009366DF /* TaskEdit.swift in Sources */,
+				330E84791E56B76800171988 /* Task+CoreDataClass.swift in Sources */,
 				79DCD0E71E13652800B63CF6 /* Data.swift in Sources */,
 				33E437DF1E022119001AE294 /* ViewController.swift in Sources */,
-				334EE95E1E51584E007441BF /* User+CoreDataProperties.swift in Sources */,
-				334EE95C1E51584E007441BF /* Task+CoreDataProperties.swift in Sources */,
-				334EE95B1E51584E007441BF /* Task+CoreDataClass.swift in Sources */,
+				330E847B1E56B76800171988 /* User+CoreDataClass.swift in Sources */,
 				79AB08D51E3982A60068B88A /* TaskHistory.swift in Sources */,
 				79AB08D31E39806C0068B88A /* TaskComp.swift in Sources */,
-				334EE95D1E51584E007441BF /* User+CoreDataClass.swift in Sources */,
+				330E847C1E56B76800171988 /* User+CoreDataProperties.swift in Sources */,
 				79DCD0E51E13601100B63CF6 /* ChildTaskView.swift in Sources */,
+				330E847F1E56BDE900171988 /* Model_for_v2.xcmappingmodel in Sources */,
 				3387937B1E361C37008FD3D5 /* AddTaskWithInput.swift in Sources */,
 				33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */,
 			);
@@ -638,6 +643,7 @@
 		3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				330E847D1E56B92600171988 /* DataModel_v2.xcdatamodel */,
 				33FE59221E3747F900450C62 /* DataModel 2.xcdatamodel */,
 				3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */,
 			);

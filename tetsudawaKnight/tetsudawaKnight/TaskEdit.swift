@@ -11,8 +11,8 @@ import UIKit
 class TaskEdit: UIViewController
 {
     var receiveTaskId :String = ""
-    var taskIsComp :Bool = false
-    var task: TaskStruct = TaskStruct.init(name: "task", yen: 100, id: "aaa", isComp: false)
+    var taskIsComp :String = "false"
+    var task: TaskStruct = TaskStruct.init(name: "task", yen: 100, id: "aaa", iscomp: "false")
     
     @IBOutlet weak var taskName: UILabel!
     @IBOutlet weak var nameSetLabel: UITextField!
@@ -22,11 +22,11 @@ class TaskEdit: UIViewController
     @IBAction func taskIsComp(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            taskIsComp = true
+            taskIsComp = "true"
             break
             
         case 1:
-            taskIsComp = false
+            taskIsComp = "false"
             break
             
         default:
@@ -46,7 +46,7 @@ class TaskEdit: UIViewController
         task = DatabaseController.getTask(id: receiveTaskId)
         taskName.text = task.name
         taskIsComp = task.isComp
-        if taskIsComp == true {
+        if taskIsComp == "true" {
             taskIsCompControll.selectedSegmentIndex = 0
         }else{
             taskIsCompControll.selectedSegmentIndex = 1

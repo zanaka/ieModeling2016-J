@@ -2,7 +2,7 @@
 //  Task+CoreDataProperties.swift
 //  tetsudawaKnight
 //
-//  Created by Kaito Ishizuka on 2017/02/13.
+//  Created by Kaito Ishizuka on 2017/02/17.
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
 //
 
@@ -18,7 +18,7 @@ extension Task {
 
     @NSManaged public var clearPrice: Int16
     @NSManaged public var id: String?
-    @NSManaged public var isComp: Bool
+    @NSManaged public var isComp: String?
     @NSManaged public var taskName: String?
 
 }
