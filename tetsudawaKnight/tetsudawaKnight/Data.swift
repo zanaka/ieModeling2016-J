@@ -15,14 +15,14 @@ struct TaskStruct
     var name :String = "task"
     var yen : Int16 = 100
     var id : String = "id"
-    var isComp : Bool = false
+    var isComp : String = "false"
     
-    init(name :String, yen :Int16, id :String, isComp :Bool)
+    init(name :String, yen :Int16, id :String, iscomp :String)
     {
         self.name = name
         self.yen = yen
         self.id = id
-        self.isComp = isComp
+        self.isComp = iscomp
     }
 }
 
