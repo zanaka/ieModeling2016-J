@@ -18,7 +18,6 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        DatabaseController.HisReloadTask()
     }
     
     

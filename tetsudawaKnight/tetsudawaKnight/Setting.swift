@@ -53,7 +53,6 @@ class Setting:UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            inpass.text = String("")
         
         
     }

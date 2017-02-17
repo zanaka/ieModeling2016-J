@@ -18,7 +18,6 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        DatabaseController.reloadTask()
         MoneyLabel.text = String(money)
     }
     
