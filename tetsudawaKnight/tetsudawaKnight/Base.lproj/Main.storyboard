@@ -793,7 +793,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hy5-JV-E7A">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1232,9 +1232,9 @@
         <image name="達成エフェクト 未完成" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ppx-ag-MKa"/>
+        <segue reference="F6g-LQ-rF0"/>
         <segue reference="eg5-t9-WTJ"/>
-        <segue reference="Ddp-j2-L0a"/>
+        <segue reference="Ppx-ag-MKa"/>
         <segue reference="Y4b-9v-bVo"/>
     </inferredMetricsTieBreakers>
 </document>
