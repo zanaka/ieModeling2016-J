@@ -69,7 +69,7 @@ class DatabaseController {
     do{
         taskList.removeAll()
         let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
-        let predicate = NSPredicate(format: "isComp == false")
+        let predicate = NSPredicate(format: "isComp == NO")
         fetchRequest.predicate = predicate
         for result in searchResults as [Task]{
             // DatabaseController.getContext().delete(result)
@@ -86,7 +86,7 @@ class DatabaseController {
         do{
             HisTaskList.removeAll()
             let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
-            let predicate = NSPredicate(format: "isComp == true")
+            let predicate = NSPredicate(format: "isComp == YES")
             fetchRequest.predicate = predicate
             for result in searchResults as [Task]{
                 //            DatabaseController.getContext().delete(result)
@@ -171,6 +171,11 @@ class DatabaseController {
         catch{
             
         }
+    }
+    
+    
+    class func loadPass(){
+        
     }
 
 }
