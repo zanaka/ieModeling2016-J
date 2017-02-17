@@ -14,10 +14,17 @@ class Setting:UIViewController {
     
     var inword : String = ""
     var bang : Int = 0
-    
-    
     @IBOutlet weak var inpass: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        inpass.text = String(inword)
+        
+    }
+    
+    
+    @IBAction func put0(_ sender: Any) {
+    }
     @IBAction func put1(_ sender: Any) {
         inword.append("1")
         inpass.text = String(inword)
@@ -48,16 +55,6 @@ class Setting:UIViewController {
         bang = 0
         inpass.text = String(inword)
     }
-    
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            inpass.text = String("")
-        
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
