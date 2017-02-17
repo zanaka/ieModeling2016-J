@@ -13,10 +13,19 @@ import UIKit
 class PASS: UIViewController {
     
     @IBOutlet weak var tigau: UILabel!
-    
+    @IBOutlet weak var inpass: UILabel!
+
     var inword : String = ""
     var inbang : String = ""
     var bang : Int = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        inpass.text = String(inword)
+        tigau.text = String(inbang)
+        
+        
+    }
 
     
     @IBAction func put1(_ sender: Any) {
@@ -219,23 +228,6 @@ class PASS: UIViewController {
         
         
     }
-    
-    @IBOutlet weak var inpass: UILabel!
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        inpass.text = String("")
-        tigau.text = String("")
-        
-        
-    }
-
-    
-    
-    
     
     
     override func didReceiveMemoryWarning() {

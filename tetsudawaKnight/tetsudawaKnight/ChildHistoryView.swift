@@ -54,9 +54,9 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToTaskUnClear"
         {
-            let tc:TaskUncomp = segue.destination as! TaskUncomp
-            tc.receiveCellText = currentCellText
-            tc.receiveCellYen = currentCellYen
+            let tu:TaskUncomp = segue.destination as! TaskUncomp
+            tu.receiveCellText = currentCellText
+            tu.receiveCellYen = currentCellYen
         }
     }
     
