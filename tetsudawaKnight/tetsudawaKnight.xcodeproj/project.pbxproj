@@ -12,6 +12,7 @@
 		330E847B1E56B76800171988 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84771E56B76800171988 /* User+CoreDataClass.swift */; };
 		330E847C1E56B76800171988 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84781E56B76800171988 /* User+CoreDataProperties.swift */; };
 		330E847F1E56BDE900171988 /* Model_for_v2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */; };
+		330E84811E56E14300171988 /* ParentHistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84801E56E14300171988 /* ParentHistView.swift */; };
 		3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */; };
 		3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */; };
 		3387937B1E361C37008FD3D5 /* AddTaskWithInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387937A1E361C37008FD3D5 /* AddTaskWithInput.swift */; };
@@ -61,6 +62,7 @@
 		330E84781E56B76800171988 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		330E847D1E56B92600171988 /* DataModel_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel_v2.xcdatamodel; sourceTree = "<group>"; };
 		330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model_for_v2.xcmappingmodel; sourceTree = "<group>"; };
+		330E84801E56E14300171988 /* ParentHistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentHistView.swift; sourceTree = "<group>"; };
 		3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseController.swift; path = ../DatabaseController.swift; sourceTree = "<group>"; };
 		3387937A1E361C37008FD3D5 /* AddTaskWithInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskWithInput.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				79982D7E1E25C50A009366DF /* TaskEdit.swift */,
 				79982D7B1E25C50A009366DF /* MoneyView.swift */,
 				790D74E11E56B6EB007A901D /* Setting.swift */,
+				330E84801E56E14300171988 /* ParentHistView.swift */,
 			);
 			name = parent;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				79982D851E25C50A009366DF /* TaskSetCell.swift in Sources */,
 				3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */,
 				79982D841E25C50A009366DF /* TaskEdit.swift in Sources */,
+				330E84811E56E14300171988 /* ParentHistView.swift in Sources */,
 				330E84791E56B76800171988 /* Task+CoreDataClass.swift in Sources */,
 				79DCD0E71E13652800B63CF6 /* Data.swift in Sources */,
 				33E437DF1E022119001AE294 /* ViewController.swift in Sources */,
