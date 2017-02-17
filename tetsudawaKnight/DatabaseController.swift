@@ -68,9 +68,11 @@ class DatabaseController {
     let fetchRequest:NSFetchRequest<Task> = Task.fetchRequest()
     do{
         taskList.removeAll()
-        let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
         let predicate = NSPredicate(format: "isComp = 'false'")
         fetchRequest.predicate = predicate
+        let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+        
+        
         for result in searchResults as [Task]{
             //DatabaseController.getContext().delete(result)
             //self.saveContext()
@@ -86,9 +88,10 @@ class DatabaseController {
         let fetchRequest:NSFetchRequest<Task> = Task.fetchRequest()
         do{
             HisTaskList.removeAll()
-            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
             let predicate = NSPredicate(format: "isComp = 'true'")
             fetchRequest.predicate = predicate
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            
             for result in searchResults as [Task]{
                 //DatabaseController.getContext().delete(result)
                 //self.saveContext()

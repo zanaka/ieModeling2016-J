@@ -13,8 +13,9 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     // 合計金額の表示
     
     @IBOutlet weak var MoneyLabel: UILabel!
-    @IBOutlet weak var taskTableView: UITableView!
     
+    
+    @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         DatabaseController.HisReloadTask()
@@ -33,7 +34,7 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = taskTableView.dequeueReusableCell(withIdentifier: "taskcell") as! TaskCell
+        let cell = taskTableView.dequeueReusableCell(withIdentifier: "histaskcell") as! TaskCell
         //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
         cell.taskName.text = HisTaskList[indexPath.row].name
         cell.taskYen.text = String(HisTaskList[indexPath.row].yen)
