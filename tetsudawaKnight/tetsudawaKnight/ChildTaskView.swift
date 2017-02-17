@@ -42,14 +42,7 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return(cell)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == UITableViewCellEditingStyle.delete
-        {
-            taskList.remove(at: indexPath.row)
-            taskTableView.reloadData()
-        }
-    }
+
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)

@@ -40,14 +40,7 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
         return(cell)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == UITableViewCellEditingStyle.delete
-        {
-            HisTaskList.remove(at: indexPath.row)
-            taskTableView.reloadData()
-        }
-    }
+
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
