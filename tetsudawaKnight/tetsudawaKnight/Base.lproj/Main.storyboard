@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GLG-eh-ejX" kind="relationship" relationship="rootViewController" id="FOa-CI-fDn"/>
+                        <segue destination="GLG-eh-ejX" kind="relationship" relationship="rootViewController" id="16D-aZ-pkJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i23-u4-qlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -595,7 +595,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="iSZ-li-WyM">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxf-hL-7f8" userLabel="MoneyLabel">
@@ -802,11 +802,11 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hy5-JV-E7A">
-                                <rect key="frame" x="0.0" y="211" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="histaskcell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskcell" id="q7s-FZ-mf6" customClass="TaskCell" customModule="tetsudawaKnight" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="histaskcell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="histtaskcell" id="q7s-FZ-mf6" customClass="TaskCell" customModule="tetsudawaKnight" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q7s-FZ-mf6" id="Ukw-ow-jPZ">
@@ -854,13 +854,13 @@
                     <navigationItem key="navigationItem" title="履歴" id="asI-lI-rmr">
                         <barButtonItem key="leftBarButtonItem" title="子" id="hFL-dH-QdH">
                             <connections>
-                                <segue destination="i71-bp-ZPV" kind="modal" id="ygP-Vz-VVD"/>
+                                <segue destination="i71-bp-ZPV" kind="show" id="YRy-vK-HjG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="taskTableView" destination="hy5-JV-E7A" id="9hy-R8-0Zq"/>
-                        <segue destination="vcn-Ug-OoV" kind="show" identifier="to task Uncomp" id="X4d-b7-UXB"/>
+                        <segue destination="vcn-Ug-OoV" kind="show" identifier="to task Uncomp" id="6DO-94-Jga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gQ-Yf-x4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1241,6 +1241,6 @@
         <segue reference="Z0v-Td-O3K"/>
         <segue reference="Y4b-9v-bVo"/>
         <segue reference="jLA-WP-2jd"/>
-        <segue reference="ygP-Vz-VVD"/>
+        <segue reference="YRy-vK-HjG"/>
     </inferredMetricsTieBreakers>
 </document>
