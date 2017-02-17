@@ -108,7 +108,7 @@
                                     <navigationItem title="設定" id="lE6-9Q-kX1">
                                         <barButtonItem key="leftBarButtonItem" title="親" id="DjZ-9f-dio">
                                             <connections>
-                                                <segue destination="Eyu-Rz-Pat" kind="modal" modalTransitionStyle="crossDissolve" id="l4M-Y2-gBf"/>
+                                                <segue destination="Eyu-Rz-Pat" kind="modal" modalTransitionStyle="crossDissolve" id="A32-3D-ndh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -120,7 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="パスワード変更"/>
                                 <connections>
-                                    <segue destination="n6k-KE-SAh" kind="modal" modalTransitionStyle="flipHorizontal" id="07g-tV-BNF"/>
+                                    <segue destination="n6k-KE-SAh" kind="modal" modalTransitionStyle="coverVertical" id="07g-tV-BNF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdx-au-xP2">
@@ -677,7 +677,7 @@
                     <navigationItem key="navigationItem" title="タスク管理" id="vv8-B9-SyG">
                         <barButtonItem key="leftBarButtonItem" title="子" id="wRP-b0-QLZ">
                             <connections>
-                                <segue destination="i71-bp-ZPV" kind="modal" modalTransitionStyle="flipHorizontal" id="0P1-vI-mNq"/>
+                                <segue destination="i71-bp-ZPV" kind="modal" id="3TV-fD-fOx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -850,7 +850,7 @@
                     <navigationItem key="navigationItem" title="履歴" id="asI-lI-rmr">
                         <barButtonItem key="leftBarButtonItem" title="子" id="hFL-dH-QdH">
                             <connections>
-                                <segue destination="i71-bp-ZPV" kind="modal" modalTransitionStyle="flipHorizontal" id="eg5-t9-WTJ"/>
+                                <segue destination="i71-bp-ZPV" kind="modal" id="ygP-Vz-VVD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1023,7 +1023,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="×"/>
                                 <connections>
-                                    <segue destination="Eyu-Rz-Pat" kind="modal" modalTransitionStyle="flipHorizontal" id="Ppx-ag-MKa"/>
+                                    <segue destination="Eyu-Rz-Pat" kind="modal" modalTransitionStyle="coverVertical" id="Ppx-ag-MKa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVy-97-N8x">
@@ -1054,11 +1054,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ku0-Tv-htf"/>
                     <connections>
                         <outlet property="inpass" destination="FHz-Tt-YBA" id="TKT-3r-fB4"/>
                         <outlet property="tigau" destination="mFm-zj-Jds" id="Dcf-Pd-v2e"/>
                         <outlet property="view" destination="mFm-zj-Jds" id="ocq-CO-HIC"/>
-                        <segue destination="cvh-yr-2NW" kind="modal" identifier="passok" modalTransitionStyle="flipHorizontal" id="F6g-LQ-rF0"/>
+                        <segue destination="cvh-yr-2NW" kind="modal" identifier="passok" modalTransitionStyle="coverVertical" id="F6g-LQ-rF0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foE-sE-klQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1183,7 +1184,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="×"/>
                                 <connections>
-                                    <segue destination="cvh-yr-2NW" kind="modal" modalTransitionStyle="flipHorizontal" id="Z0v-Td-O3K"/>
+                                    <segue destination="cvh-yr-2NW" kind="modal" modalTransitionStyle="coverVertical" id="Z0v-Td-O3K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-eQ-sdJ">
@@ -1218,7 +1219,7 @@
                     </view>
                     <connections>
                         <outlet property="inpass" destination="nT1-lU-1ta" id="Jb9-hr-rgd"/>
-                        <segue destination="cvh-yr-2NW" kind="modal" identifier="owari" modalTransitionStyle="flipHorizontal" id="Ddp-j2-L0a"/>
+                        <segue destination="cvh-yr-2NW" kind="modal" identifier="owari" modalTransitionStyle="coverVertical" id="Ddp-j2-L0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rma-tG-qCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1232,9 +1233,9 @@
         <image name="達成エフェクト 未完成" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="F6g-LQ-rF0"/>
-        <segue reference="eg5-t9-WTJ"/>
-        <segue reference="Ppx-ag-MKa"/>
+        <segue reference="Z0v-Td-O3K"/>
         <segue reference="Y4b-9v-bVo"/>
+        <segue reference="Ppx-ag-MKa"/>
+        <segue reference="3TV-fD-fOx"/>
     </inferredMetricsTieBreakers>
 </document>

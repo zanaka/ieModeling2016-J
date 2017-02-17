@@ -227,7 +227,7 @@ class PASS: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        inpass.text = String(inword)
+        inpass.text = String("")
         tigau.text = String("")
         
         
