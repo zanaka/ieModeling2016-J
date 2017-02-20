@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		330E84791E56B76800171988 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84751E56B76800171988 /* Task+CoreDataClass.swift */; };
 		330E847A1E56B76800171988 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84761E56B76800171988 /* Task+CoreDataProperties.swift */; };
-		330E847B1E56B76800171988 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84771E56B76800171988 /* User+CoreDataClass.swift */; };
-		330E847C1E56B76800171988 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E84781E56B76800171988 /* User+CoreDataProperties.swift */; };
 		330E847F1E56BDE900171988 /* Model_for_v2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */; };
 		3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */; };
 		3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */; };
@@ -23,6 +21,8 @@
 		33E437F21E022119001AE294 /* tetsudawaKnightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437F11E022119001AE294 /* tetsudawaKnightTests.swift */; };
 		33E437FD1E022119001AE294 /* tetsudawaKnightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E437FC1E022119001AE294 /* tetsudawaKnightUITests.swift */; };
 		33EEACC71E5AC273005D2A20 /* ParentHistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACC61E5AC273005D2A20 /* ParentHistView.swift */; };
+		33EEACD21E5AE5A1005D2A20 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACD01E5AE5A1005D2A20 /* User+CoreDataClass.swift */; };
+		33EEACD31E5AE5A1005D2A20 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACD11E5AE5A1005D2A20 /* User+CoreDataProperties.swift */; };
 		79075CCD1E517BBE0038D610 /* PASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CCC1E517BBE0038D610 /* PASS.swift */; };
 		79075CD11E517E050038D610 /* TaskUncomp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CD01E517E050038D610 /* TaskUncomp.swift */; };
 		790D74E21E56B6EB007A901D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D74E11E56B6EB007A901D /* Setting.swift */; };
@@ -58,8 +58,6 @@
 /* Begin PBXFileReference section */
 		330E84751E56B76800171988 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		330E84761E56B76800171988 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		330E84771E56B76800171988 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		330E84781E56B76800171988 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		330E847D1E56B92600171988 /* DataModel_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel_v2.xcdatamodel; sourceTree = "<group>"; };
 		330E847E1E56BDE900171988 /* Model_for_v2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model_for_v2.xcmappingmodel; sourceTree = "<group>"; };
 		3314E4E51E34EAF700AC3D4B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		33E437FC1E022119001AE294 /* tetsudawaKnightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetsudawaKnightUITests.swift; sourceTree = "<group>"; };
 		33E437FE1E022119001AE294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33EEACC61E5AC273005D2A20 /* ParentHistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentHistView.swift; sourceTree = "<group>"; };
+		33EEACD01E5AE5A1005D2A20 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		33EEACD11E5AE5A1005D2A20 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		33FE59221E3747F900450C62 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		79075CCC1E517BBE0038D610 /* PASS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PASS.swift; path = ../PASS.swift; sourceTree = "<group>"; };
 		79075CD01E517E050038D610 /* TaskUncomp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskUncomp.swift; sourceTree = "<group>"; };
@@ -123,10 +123,10 @@
 		3314E4ED1E34F15400AC3D4B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				33EEACD01E5AE5A1005D2A20 /* User+CoreDataClass.swift */,
+				33EEACD11E5AE5A1005D2A20 /* User+CoreDataProperties.swift */,
 				330E84751E56B76800171988 /* Task+CoreDataClass.swift */,
 				330E84761E56B76800171988 /* Task+CoreDataProperties.swift */,
-				330E84771E56B76800171988 /* User+CoreDataClass.swift */,
-				330E84781E56B76800171988 /* User+CoreDataProperties.swift */,
 			);
 			name = CoreData;
 			path = ..;
@@ -354,10 +354,12 @@
 			files = (
 				330E847A1E56B76800171988 /* Task+CoreDataProperties.swift in Sources */,
 				79075CD11E517E050038D610 /* TaskUncomp.swift in Sources */,
+				33EEACD31E5AE5A1005D2A20 /* User+CoreDataProperties.swift in Sources */,
 				3314E4E61E34EAF700AC3D4B /* DataModel.xcdatamodeld in Sources */,
 				79982D811E25C50A009366DF /* MoneyView.swift in Sources */,
 				79982D831E25C50A009366DF /* TaskCell.swift in Sources */,
 				79982D881E25C530009366DF /* AddTaskWithTemp.swift in Sources */,
+				33EEACD21E5AE5A1005D2A20 /* User+CoreDataClass.swift in Sources */,
 				79075CCD1E517BBE0038D610 /* PASS.swift in Sources */,
 				790D74E21E56B6EB007A901D /* Setting.swift in Sources */,
 				79982D8C1E25CC46009366DF /* ParentTaskView.swift in Sources */,
@@ -368,10 +370,8 @@
 				330E84791E56B76800171988 /* Task+CoreDataClass.swift in Sources */,
 				79DCD0E71E13652800B63CF6 /* Data.swift in Sources */,
 				33E437DF1E022119001AE294 /* ViewController.swift in Sources */,
-				330E847B1E56B76800171988 /* User+CoreDataClass.swift in Sources */,
 				79AB08D51E3982A60068B88A /* ChildHistoryView.swift in Sources */,
 				79AB08D31E39806C0068B88A /* TaskComp.swift in Sources */,
-				330E847C1E56B76800171988 /* User+CoreDataProperties.swift in Sources */,
 				79DCD0E51E13601100B63CF6 /* ChildTaskView.swift in Sources */,
 				330E847F1E56BDE900171988 /* Model_for_v2.xcmappingmodel in Sources */,
 				3387937B1E361C37008FD3D5 /* AddTaskWithInput.swift in Sources */,

@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  tetsudawaKnight
 //
-//  Created by Kaito Ishizuka on 2017/02/17.
+//  Created by Kaito Ishizuka on 2017/02/20.
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
 //
 
