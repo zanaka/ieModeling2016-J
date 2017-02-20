@@ -64,6 +64,25 @@ class DatabaseController {
         }
     }
     
+    class func reloadAllTask() {
+        let fetchRequest:NSFetchRequest<Task> = Task.fetchRequest()
+        do{
+            taskList.removeAll()
+            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            
+            for result in searchResults as [Task]{
+                //DatabaseController.getContext().delete(result)
+                //self.saveContext()
+                taskList.append(TaskStruct(name: result.taskName!, yen: result.clearPrice, id: result.id!, iscomp: result.isComp!))
+            }
+            
+        }
+        catch{
+        }
+    }
+    
+    
     class func reloadTask() {
     let fetchRequest:NSFetchRequest<Task> = Task.fetchRequest()
     do{
