@@ -239,7 +239,7 @@ class DatabaseController {
         self.saveContext()
     }
     
-    class func addMoney(searchId :String, changeIsParent:String,  chengeName :String, chengeMoney :Int16, chengePass: String){
+    class func addMoney(searchId :String, chengeMoney :Int16){
         let editRequest:NSFetchRequest<User> = User.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", searchId)
         editRequest.predicate = predicate
@@ -248,10 +248,7 @@ class DatabaseController {
             for result in editResults as! [User]{
                 let record = result as! NSManagedObject
                 record.setValue(searchId, forKey: "id")
-                record.setValue(chengeName, forKey: "name")
                 record.setValue(chengeMoney, forKey: "money")
-                record.setValue(changeIsParent, forKey: "isParent")
-                record.setValue(chengePass, forKey: "password")
             }
         }
         catch{
@@ -260,6 +257,26 @@ class DatabaseController {
         self.saveContext()
     }
 
+    
+    class func getMoneyValue(searchId :String) -> Int{
+        let editRequest:NSFetchRequest<User> = User.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", searchId)
+        editRequest.predicate = predicate
+        
+        var receiveMoneyValue = 0;
+        do{
+            let editResults = try DatabaseController.getContext().fetch(editRequest)
+            for result in editResults as! [User]{
+                receiveMoneyValue =  Int(result.money)
+            }
+        }
+        catch{
+            
+        }
+        self.saveContext()
+        return receiveMoneyValue
+    }
+    
 
     
     class func loadPass() -> String{
