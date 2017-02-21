@@ -20,6 +20,7 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         super.viewDidLoad()
         DatabaseController.reloadTask()
+        DatabaseController.loadLastMoneyValue()
         MoneyLabel.text = String(money)
     }
     

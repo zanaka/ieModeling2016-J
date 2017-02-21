@@ -271,7 +271,7 @@ class DatabaseController {
     
     
     
-    class func addLastMoney(chengeMoney :Int16){
+    class func addLastMoney(chengeMoney :Int64){
         let editRequest:NSFetchRequest<User> = User.fetchRequest()
         do{
             let editResults = try DatabaseController.getContext().fetch(editRequest)
