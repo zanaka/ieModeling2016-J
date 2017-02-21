@@ -18,7 +18,7 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
         if payAmount.text != ""
         {
 
-            DatabaseController.addLastMoney(chengeMoney: -Int16(payAmount.text!)!)
+            DatabaseController.addLastMoney(chengeMoney: -Int64(payAmount.text!)!)
             DatabaseController.loadLastMoneyValue()
             moneyLabel.text = String(money)
             DatabaseController.addPayHistory(price: Int16(payAmount.text!)!)
@@ -48,7 +48,7 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            DatabaseController.addLastMoney(chengeMoney: PayHistoryList[indexPath.row].price)
+            DatabaseController.addLastMoney(chengeMoney: Int64(PayHistoryList[indexPath.row].price))
             DatabaseController.loadLastMoneyValue()
             moneyLabel.text = String(money)
             DatabaseController.deletePayHistory(id: PayHistoryList[indexPath.row].id)

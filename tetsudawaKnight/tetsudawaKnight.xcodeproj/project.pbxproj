@@ -37,7 +37,6 @@
 		79982D8C1E25CC46009366DF /* ParentTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79982D8B1E25CC46009366DF /* ParentTaskView.swift */; };
 		79AB08D31E39806C0068B88A /* TaskComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB08D21E39806C0068B88A /* TaskComp.swift */; };
 		79AB08D51E3982A60068B88A /* ChildHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB08D41E3982A60068B88A /* ChildHistoryView.swift */; };
-		79C658AC1E5C1E8E001020D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C658AA1E5C1E8E001020D5 /* Main.storyboard */; };
 		79DCD0E51E13601100B63CF6 /* ChildTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCD0E41E13601100B63CF6 /* ChildTaskView.swift */; };
 		79DCD0E71E13652800B63CF6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCD0E61E13652800B63CF6 /* Data.swift */; };
 		79DE6CBC1E5C2F510000EF23 /* PassReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE6CBB1E5C2F510000EF23 /* PassReset.swift */; };
@@ -99,7 +98,6 @@
 		79982D8B1E25CC46009366DF /* ParentTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTaskView.swift; sourceTree = "<group>"; };
 		79AB08D21E39806C0068B88A /* TaskComp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskComp.swift; sourceTree = "<group>"; };
 		79AB08D41E3982A60068B88A /* ChildHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildHistoryView.swift; sourceTree = "<group>"; };
-		79C658AB1E5C1E8E001020D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79DCD0E41E13601100B63CF6 /* ChildTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTaskView.swift; sourceTree = "<group>"; };
 		79DCD0E61E13652800B63CF6 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		79DE6CBB1E5C2F510000EF23 /* PassReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassReset.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 				79982D7D1E25C50A009366DF /* TaskCell.swift */,
 				79982D7F1E25C50A009366DF /* TaskSetCell.swift */,
 				33E437DE1E022119001AE294 /* ViewController.swift */,
-				79C658AA1E5C1E8E001020D5 /* Main.storyboard */,
 				79DCD0E61E13652800B63CF6 /* Data.swift */,
 				33E437E31E022119001AE294 /* Assets.xcassets */,
 				33E437E51E022119001AE294 /* LaunchScreen.storyboard */,
@@ -342,7 +339,6 @@
 			files = (
 				33E437E71E022119001AE294 /* LaunchScreen.storyboard in Resources */,
 				33E437E41E022119001AE294 /* Assets.xcassets in Resources */,
-				79C658AC1E5C1E8E001020D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +433,6 @@
 				33E437E61E022119001AE294 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		79C658AA1E5C1E8E001020D5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79C658AB1E5C1E8E001020D5 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

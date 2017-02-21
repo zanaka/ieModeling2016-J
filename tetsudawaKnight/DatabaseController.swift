@@ -165,10 +165,10 @@ class DatabaseController {
                 {
                     if chengeIsComp == "true"
                     {
-                        self.addLastMoney(chengeMoney: result.clearPrice)
+                        self.addLastMoney(chengeMoney: Int64(result.clearPrice))
                     }else if chengeIsComp == "false"
                     {
-                        self.addLastMoney(chengeMoney: -result.clearPrice)
+                        self.addLastMoney(chengeMoney: -(Int64)(result.clearPrice))
                     }
                 }
 
