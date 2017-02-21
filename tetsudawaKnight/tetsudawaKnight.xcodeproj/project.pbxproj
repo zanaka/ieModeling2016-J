@@ -295,6 +295,7 @@
 				TargetAttributes = {
 					33E437D81E022118001AE294 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4QRYH742K6;
 						ProvisioningStyle = Automatic;
 					};
 					33E437EC1E022119001AE294 = {
@@ -538,9 +539,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4QRYH742K6;
 				INFOPLIST_FILE = tetsudawaKnight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.u-ryukyu.ie.tetsudawaKnight";
+				PRODUCT_BUNDLE_IDENTIFIER = tetsudawaKnight1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -552,9 +554,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4QRYH742K6;
 				INFOPLIST_FILE = tetsudawaKnight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.u-ryukyu.ie.tetsudawaKnight";
+				PRODUCT_BUNDLE_IDENTIFIER = tetsudawaKnight1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
