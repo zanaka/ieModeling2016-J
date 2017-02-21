@@ -57,6 +57,7 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DatabaseController.loadLastMoneyValue()
         moneyLabel.text = String(money)
         payAmount.keyboardType = UIKeyboardType.numberPad
     }

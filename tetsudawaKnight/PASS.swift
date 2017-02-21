@@ -22,7 +22,7 @@ class PASS: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        pass = DatabaseController.loadPass()
+        DatabaseController.loadPass()
         
         inpass.text = String(inword)
         tigau.text = String(inbang)

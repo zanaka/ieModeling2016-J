@@ -221,16 +221,15 @@ class DatabaseController {
     }
     
     class func reloadUser() {
-        let fetchRequest:NSFetchRequest<User> = User.fetchRequest()
+        let childRequest:NSFetchRequest<User> = User.fetchRequest()
         do{
-            UserList.removeAll()
-            let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
-            
+            ChildList.removeAll()
+            let searchResults = try DatabaseController.getContext().fetch(childRequest)
             
             for result in searchResults as [User]{
                 //DatabaseController.getContext().delete(result)
                 //self.saveContext()
-                UserList.append(UserStruct(name: result.name!, yen: result.money, id: result.id!, isParent: result.isParent! ,password: result.password!))
+                ChildList.append(UserStruct(name: result.name!, yen: result.money, id: result.id!))
             }
             
         }
@@ -238,7 +237,7 @@ class DatabaseController {
         }
     }
     
-    class func editUser(searchId :String, changeIsParent:String,  chengeName :String, chengeMoney :Int16, chengePass: String){
+    class func editUser(searchId :String,  chengeName :String, chengeMoney :Int16){
         let editRequest:NSFetchRequest<User> = User.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", searchId)
         editRequest.predicate = predicate
@@ -249,8 +248,6 @@ class DatabaseController {
                 record.setValue(searchId, forKey: "id")
                 record.setValue(chengeName, forKey: "name")
                 record.setValue(chengeMoney, forKey: "money")
-                record.setValue(changeIsParent, forKey: "isParent")
-                record.setValue(chengePass, forKey: "password")
             }
         }
         catch{
@@ -259,19 +256,14 @@ class DatabaseController {
         self.saveContext()
     }
     
-    class func addMoney(searchId :String, changeIsParent:String,  chengeName :String, chengeMoney :Int16, chengePass: String){
+    class func addLastMoney(chengeMoney :Int16){
         let editRequest:NSFetchRequest<User> = User.fetchRequest()
-        let predicate = NSPredicate(format: "id == %@", searchId)
-        editRequest.predicate = predicate
         do{
             let editResults = try DatabaseController.getContext().fetch(editRequest)
             for result in editResults as! [User]{
                 let record = result as! NSManagedObject
-                record.setValue(searchId, forKey: "id")
-                record.setValue(chengeName, forKey: "name")
-                record.setValue(chengeMoney, forKey: "money")
-                record.setValue(changeIsParent, forKey: "isParent")
-                record.setValue(chengePass, forKey: "password")
+
+                record.setValue(money+chengeMoney, forKey: "money")
             }
         }
         catch{
@@ -280,73 +272,83 @@ class DatabaseController {
         self.saveContext()
     }
 
-
     
-    class func loadPass() -> String{
-        let parentRequest:NSFetchRequest<User> = User.fetchRequest()
-        let parentpredicate = NSPredicate(format: "isParent == %@", "true")
-        var receivePass = "0000"
-        parentRequest.predicate = parentpredicate
-        do{
-            let initResults = try DatabaseController.getContext().fetch(parentRequest)
-            if initResults.count == 0{
-                
-                for result in initResults as [User]{
-                    receivePass = result.password!
-                }            }
-        }
-        catch{
-            
-        }
-        return receivePass
-    }
-    
-    class func initUser(){
+    class func loadLastMoneyValue(){
+        let loadRequest:NSFetchRequest<User> = User.fetchRequest()
         
-        let parentRequest:NSFetchRequest<User> = User.fetchRequest()
-        let parentpredicate = NSPredicate(format: "isParent == %@", "true")
-        parentRequest.predicate = parentpredicate
         do{
-            let initResults = try DatabaseController.getContext().fetch(parentRequest)
-            if initResults.count == 0{
-                let user :User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
-                
-                
-                user.name = "Parent"
-                user.id = NSUUID().uuidString
-                user.money = 0
-                user.isParent = "true"
-                user.password="0000"
+            let loadResults = try DatabaseController.getContext().fetch(loadRequest)
+            for result in loadResults as! [User]{
+                money =  Int(result.money)
             }
         }
         catch{
             
         }
-        
+    }
+    
+
+    
+    class func loadPass(){
+        let parentRequest:NSFetchRequest<Pass> = Pass.fetchRequest()
+        do{
+            let passResults = try DatabaseController.getContext().fetch(parentRequest)
+            for result in passResults as [Pass]{
+                    pass = result.password!
+            }
+        }
+        catch{
+            
+        }
+    }
+    
+    class func initEntity(){
         
         let childRequest:NSFetchRequest<User> = User.fetchRequest()
-        let childpredicate = NSPredicate(format: "isParent == %@", "true")
-        childRequest.predicate = childpredicate
         do{
-            let initResults = try DatabaseController.getContext().fetch(childRequest)
-            if initResults.count == 0{
+            let childResults = try DatabaseController.getContext().fetch(childRequest)
+            if childResults.count == 0{
                 let user :User = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.getContext()) as! User
-                
                 
                 user.name = "Child"
                 user.id = NSUUID().uuidString
                 user.money = 0
-                user.isParent = "false"
-                user.password = "0000"
             }
         }
         catch{
             
         }
         
-        
+
+        let passRequest:NSFetchRequest<Pass> = Pass.fetchRequest()
+        do{
+            let passResults = try DatabaseController.getContext().fetch(passRequest)
+            if passResults.count == 0{
+                let pass :Pass = NSEntityDescription.insertNewObject(forEntityName: "Pass", into: DatabaseController.getContext()) as! Pass
+                
+                pass.password = "0123"
+            }
+        }
+        catch{
+            
+        }
+
         self.saveContext()
 
+    }
+    
+    class func editPass(editPass: String){
+        let parentRequest:NSFetchRequest<Pass> = Pass.fetchRequest()
+        do{
+            let passResults = try DatabaseController.getContext().fetch(parentRequest)
+            for result in passResults as [Pass]{
+                let record = result as! NSManagedObject
+                record.setValue(editPass, forKey: "password")
+            }
+        }
+        catch{
+            
+        }
     }
 
     
