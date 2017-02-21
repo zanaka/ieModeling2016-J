@@ -13,7 +13,7 @@
         <scene sceneID="pz8-Wv-5zT">
             <objects>
                 <navigationController title="履歴" id="Uof-7M-3No" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="履歴" image="丸" selectedImage="丸" id="Jat-xf-121"/>
+                    <tabBarItem key="tabBarItem" title="きろく" image="丸" selectedImage="丸" id="Jat-xf-121"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DZc-fS-d0z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -314,11 +314,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="タスク名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-K4-bHq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-K4-bHq">
                                 <rect key="frame" x="60" y="363" width="144" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="zko-oR-iJx"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -451,14 +449,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="taskName" text="タスク名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxY-x7-0xb">
-                                                    <rect key="frame" x="26" y="12" width="134" height="75"/>
+                                                    <rect key="frame" x="26" y="12" width="321" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKb-Nc-zZc">
-                                                    <rect key="frame" x="577" y="-1" width="118" height="100"/>
+                                                    <rect key="frame" x="481" y="-1" width="214" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
@@ -539,11 +537,11 @@
             </objects>
             <point key="canvasLocation" x="150" y="-158"/>
         </scene>
-        <!--タスク管理-->
+        <!--てつだい-->
         <scene sceneID="a6F-5u-csa">
             <objects>
                 <navigationController id="MPb-zB-0pj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="タスク管理" image="丸" id="UeR-zv-ZcE" userLabel="タスク"/>
+                    <tabBarItem key="tabBarItem" title="てつだい" image="丸" id="UeR-zv-ZcE" userLabel="タスク"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A1p-tA-XT2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -569,9 +567,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cun-it-Etl">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="タスク画面の背景(ipad用)" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-Vc-xE9">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cun-it-Etl">
+                                <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="iSZ-li-WyM">
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -583,7 +586,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="貯金額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEp-6S-NHF">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ちょきん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEp-6S-NHF">
                                             <rect key="frame" x="195" y="15" width="176" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -609,7 +612,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="taskName" text="タスク名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="200-SS-jCh">
-                                                    <rect key="frame" x="30" y="0.0" width="134" height="100"/>
+                                                    <rect key="frame" x="30" y="0.0" width="319" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
@@ -623,7 +626,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4I-er-lhG">
-                                                    <rect key="frame" x="585" y="-1" width="118" height="100"/>
+                                                    <rect key="frame" x="499" y="-1" width="204" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                     <nil key="textColor"/>
@@ -644,15 +647,9 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cun-it-Etl" firstAttribute="leading" secondItem="0yr-Ag-vQS" secondAttribute="leading" id="Csl-jo-AkM"/>
-                            <constraint firstItem="uRp-Qg-oob" firstAttribute="top" secondItem="cun-it-Etl" secondAttribute="bottom" id="d6o-yY-6sa"/>
-                            <constraint firstAttribute="trailing" secondItem="cun-it-Etl" secondAttribute="trailing" id="hph-cW-JlL"/>
-                            <constraint firstItem="cun-it-Etl" firstAttribute="top" secondItem="0yr-Ag-vQS" secondAttribute="top" id="jwk-bl-Srg"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="タスク" image="丸" id="ZVE-hu-P4l" userLabel="タスク管理"/>
-                    <navigationItem key="navigationItem" title="タスク管理" id="Cgv-Hl-m3j">
+                    <navigationItem key="navigationItem" title="おてつだいリスト" id="Cgv-Hl-m3j">
                         <barButtonItem key="leftBarButtonItem" title="子" id="ho2-JQ-E6G">
                             <connections>
                                 <action selector="putsend:" destination="E2M-LC-fPt" id="IE5-Ya-Iq7"/>
@@ -686,15 +683,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MW-cJ-D3T" userLabel="Taskname">
-                                <rect key="frame" x="259" y="281" width="215" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-0u-wNC">
+                                <rect key="frame" x="240" y="678" width="252" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="おわった！"/>
+                                <connections>
+                                    <action selector="putcomp:" destination="DkR-Wg-K5u" eventType="touchDown" id="WRB-PC-Mwr"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-YE-Xad" userLabel="Taskyen">
-                                <rect key="frame" x="292" y="351" width="177" height="21"/>
+                                <rect key="frame" x="156" y="351" width="313" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -707,19 +706,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ep-0u-wNC">
-                                <rect key="frame" x="240" y="678" width="252" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MW-cJ-D3T" userLabel="Taskname">
+                                <rect key="frame" x="43" y="279" width="646" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="完了する"/>
-                                <connections>
-                                    <action selector="putcomp:" destination="DkR-Wg-K5u" eventType="touchDown" id="WRB-PC-Mwr"/>
-                                </connections>
-                            </button>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="タスク完了報告" id="hZW-rk-LBv"/>
+                    <navigationItem key="navigationItem" title="おわった？" id="hZW-rk-LBv"/>
                     <connections>
                         <outlet property="Taskname" destination="4MW-cJ-D3T" id="kq2-FD-mqu"/>
                         <outlet property="Taskyen" destination="fVH-YE-Xad" id="4Vj-Ip-ttq"/>
@@ -773,10 +770,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjR-Cv-SFj">
-                                <rect key="frame" x="0.0" y="28" width="768" height="939"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ipad版履歴背景" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-kj-ind">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjR-Cv-SFj">
+                                <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="histtaskcell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="histtaskcell" rowHeight="100" id="pHF-tM-5L3" customClass="TaskCell" customModule="tetsudawaKnight" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="100"/>
@@ -786,14 +787,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="taskName" text="タスク名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-Ts-3D5">
-                                                    <rect key="frame" x="33" y="0.0" width="134" height="99"/>
+                                                    <rect key="frame" x="33" y="0.0" width="343" height="99"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqR-5d-Nen">
-                                                    <rect key="frame" x="583" y="-2" width="118" height="102"/>
+                                                    <rect key="frame" x="500" y="-2" width="201" height="102"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
@@ -823,10 +824,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="履歴" image="丸" id="exB-Zz-uyu"/>
-                    <navigationItem key="navigationItem" title="履歴" id="sxa-2w-sOT">
+                    <navigationItem key="navigationItem" title="やったことリスト" id="sxa-2w-sOT">
                         <barButtonItem key="leftBarButtonItem" title="子" id="aTC-cL-ycH">
                             <connections>
-                                <action selector="putsend:" destination="GLG-eh-ejX" id="Oou-02-H2x"/>
+                                <action selector="putsend:" destination="GLG-eh-ejX" id="p83-jl-NmD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -834,7 +835,7 @@
                     <connections>
                         <outlet property="taskTableView" destination="RjR-Cv-SFj" id="LQC-bN-23Z"/>
                         <segue destination="vcn-Ug-OoV" kind="show" identifier="ToTaskUnClear" id="6DO-94-Jga"/>
-                        <segue destination="i71-bp-ZPV" kind="modal" modalTransitionStyle="flipHorizontal" id="0Gi-PN-us3"/>
+                        <segue destination="i71-bp-ZPV" kind="modal" identifier="topass" modalTransitionStyle="flipHorizontal" id="0Gi-PN-us3"/>
                         <segue destination="cvh-yr-2NW" kind="modal" identifier="tonopass" modalTransitionStyle="crossDissolve" id="8tk-iH-Uqe"/>
                     </connections>
                 </viewController>
@@ -854,15 +855,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHS-vK-QW4" userLabel="Taskname">
-                                <rect key="frame" x="259" y="291" width="215" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq4-qd-Ll2">
+                                <rect key="frame" x="291" y="707" width="210" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="もどす！"/>
+                                <connections>
+                                    <action selector="putuncomp:" destination="vcn-Ug-OoV" eventType="touchDown" id="0kY-dZ-ufv"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awX-K9-uda" userLabel="Taskyen">
-                                <rect key="frame" x="308" y="365" width="177" height="21"/>
+                                <rect key="frame" x="143" y="365" width="342" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -875,19 +878,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq4-qd-Ll2">
-                                <rect key="frame" x="291" y="716" width="210" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タスク名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHS-vK-QW4" userLabel="Taskname">
+                                <rect key="frame" x="77" y="290" width="615" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="取り消す"/>
-                                <connections>
-                                    <action selector="putuncomp:" destination="vcn-Ug-OoV" eventType="touchDown" id="0kY-dZ-ufv"/>
-                                </connections>
-                            </button>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="タスク完了取り消し" id="Z9s-F1-YBz"/>
+                    <navigationItem key="navigationItem" title="やっぱりもどす？" id="Z9s-F1-YBz"/>
                     <connections>
                         <outlet property="Taskname" destination="JHS-vK-QW4" id="rQ3-x6-YQu"/>
                         <outlet property="Taskyen" destination="awX-K9-uda" id="MDu-Iw-fsq"/>
@@ -1198,8 +1199,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="inpass" destination="01O-JT-QM6" id="uPp-lr-jsA"/>
-                        <outlet property="view" destination="01O-JT-QM6" id="DrB-rf-ove"/>
+                        <outlet property="inpass" destination="01O-JT-QM6" id="bXN-K7-1QI"/>
                         <segue destination="cvh-yr-2NW" kind="modal" identifier="owari" modalTransitionStyle="flipHorizontal" id="Ddp-j2-L0a"/>
                     </connections>
                 </viewController>
@@ -1210,13 +1210,15 @@
     </scenes>
     <resources>
         <image name="ipad版タイトル(城あり)" width="1536" height="2048"/>
+        <image name="ipad版履歴背景" width="1536" height="2048"/>
+        <image name="タスク画面の背景(ipad用)" width="1536" height="2048"/>
         <image name="丸" width="30" height="30"/>
         <image name="達成エフェクト(ipad用)" width="1536" height="2048"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Gi-PN-us3"/>
+        <segue reference="ou2-YP-qsS"/>
         <segue reference="i22-BA-apH"/>
-        <segue reference="F6g-LQ-rF0"/>
-        <segue reference="Csx-Y0-Wv4"/>
+        <segue reference="YSU-zH-Mrq"/>
+        <segue reference="KC9-ea-2J2"/>
     </inferredMetricsTieBreakers>
 </document>

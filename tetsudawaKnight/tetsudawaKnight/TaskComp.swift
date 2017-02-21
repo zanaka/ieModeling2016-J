@@ -31,7 +31,7 @@ class TaskComp: UIViewController {
     
     @IBAction func putcomp(_ sender: Any) {
         DatabaseController.clearTask(id: receiveCellId)
-        DatabaseController.addLastMoney(chengeMoney :Int16(receiveCellYen))
+        DatabaseController.addLastMoney(chengeMoney :Int64(receiveCellYen))
         performSegue(withIdentifier: "tocomp2", sender: nil)
     }
     

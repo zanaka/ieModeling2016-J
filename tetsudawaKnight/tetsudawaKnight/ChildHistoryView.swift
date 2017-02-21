@@ -19,10 +19,15 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         DatabaseController.HisReloadTask()
+        
+        
+        
     }
     
     
+
     @IBAction func putsend(_ sender: Any) {
         DatabaseController.loadPass()
         if ( pass == "0" ){
@@ -44,7 +49,7 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = taskTableView.dequeueReusableCell(withIdentifier: "histtaskcell") as! TaskCell
+               let cell = taskTableView.dequeueReusableCell(withIdentifier: "histtaskcell") as! TaskCell
         //        let cell = TaskCell(style: UITableViewCellStyle.default, reuseIdentifier: "taskcell")
         cell.taskName.text = HisTaskList[indexPath.row].name
         cell.taskYen.text = String(HisTaskList[indexPath.row].yen)
