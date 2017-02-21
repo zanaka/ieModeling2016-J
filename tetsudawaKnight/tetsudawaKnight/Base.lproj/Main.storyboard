@@ -927,8 +927,7 @@
                     <connections>
                         <outlet property="Taskname" destination="JHS-vK-QW4" id="rQ3-x6-YQu"/>
                         <outlet property="Taskyen" destination="awX-K9-uda" id="MDu-Iw-fsq"/>
-                        <outlet property="putuncomp" destination="cq4-qd-Ll2" id="EdF-f0-7xv"/>
-                        <segue destination="GLG-eh-ejX" kind="push" id="9Aa-uG-B32"/>
+                        <segue destination="Eyu-Rz-Pat" kind="modal" identifier="touncomp2" modalTransitionStyle="crossDissolve" id="i22-BA-apH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuC-UB-sW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1250,10 +1249,9 @@
         <image name="達成エフェクト 未完成" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3TV-fD-fOx"/>
-        <segue reference="pua-iR-0EM"/>
-        <segue reference="Z0v-Td-O3K"/>
+        <segue reference="P2d-VJ-EIs"/>
+        <segue reference="i22-BA-apH"/>
+        <segue reference="F6g-LQ-rF0"/>
         <segue reference="KC9-ea-2J2"/>
-        <segue reference="9Aa-uG-B32"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -27,7 +27,9 @@ class PASS: UIViewController {
         inpass.text = String(inword)
         tigau.text = String(inbang)
         
-        
+        if ( pass == "0" ){
+        performSegue(withIdentifier: "passok", sender: nil)
+        }
     }
 
     

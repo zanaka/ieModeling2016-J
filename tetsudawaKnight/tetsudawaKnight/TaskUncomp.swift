@@ -31,7 +31,9 @@ class TaskUncomp: UIViewController {
 
     @IBAction func putuncomp(_ sender: Any) {
         DatabaseController.UnclearTask(id: receiveCellId)
-        performSegue(withIdentifier: "touncomp", sender: nil)
+        performSegue(withIdentifier: "touncomp2", sender: nil)
+        
+        self.tabBarController?.selectedIndex = 2
     }
     
     override func didReceiveMemoryWarning() {

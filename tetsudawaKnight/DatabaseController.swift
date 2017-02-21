@@ -114,7 +114,7 @@ class DatabaseController {
             for result in searchResults as [Task]{
                 //DatabaseController.getContext().delete(result)
                 //self.saveContext()
-                HisTaskList.append(TaskStruct(name: result.taskName!, yen: Int16(result.clearPrice), id: result.id!, iscomp: result.isComp!))
+                HisTaskList.append(TaskStruct(name: result.taskName!, yen: result.clearPrice, id: result.id!, iscomp: result.isComp!))
             }
             
         }
