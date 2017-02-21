@@ -205,7 +205,7 @@ class DatabaseController {
     class func reloadUser() {
         let fetchRequest:NSFetchRequest<User> = User.fetchRequest()
         do{
-            taskList.removeAll()
+            UserList.removeAll()
             let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
             
             
@@ -240,6 +240,28 @@ class DatabaseController {
         }
         self.saveContext()
     }
+    
+    class func addMoney(searchId :String, changeIsParent:String,  chengeName :String, chengeMoney :Int16, chengePass: String){
+        let editRequest:NSFetchRequest<User> = User.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", searchId)
+        editRequest.predicate = predicate
+        do{
+            let editResults = try DatabaseController.getContext().fetch(editRequest)
+            for result in editResults as! [User]{
+                let record = result as! NSManagedObject
+                record.setValue(searchId, forKey: "id")
+                record.setValue(chengeName, forKey: "name")
+                record.setValue(chengeMoney, forKey: "money")
+                record.setValue(changeIsParent, forKey: "isParent")
+                record.setValue(chengePass, forKey: "password")
+            }
+        }
+        catch{
+            
+        }
+        self.saveContext()
+    }
+
 
     
     class func loadPass() -> String{
