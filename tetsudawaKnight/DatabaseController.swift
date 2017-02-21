@@ -326,7 +326,7 @@ class DatabaseController {
             if passResults.count == 0{
                 let pass :Pass = NSEntityDescription.insertNewObject(forEntityName: "Pass", into: DatabaseController.getContext()) as! Pass
                 
-                pass.password = "0123"
+                pass.password = "0"
             }
         }
         catch{
