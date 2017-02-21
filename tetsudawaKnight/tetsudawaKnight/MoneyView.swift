@@ -39,6 +39,7 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "payHistoryCell")
+        cell.textLabel.text
         cell.textLabel?.text = String(PayHistoryList[indexPath.row].price)
         
         return(cell)
