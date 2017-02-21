@@ -31,6 +31,7 @@ class TaskUncomp: UIViewController {
 
     @IBAction func putuncomp(_ sender: Any) {
         DatabaseController.UnclearTask(id: receiveCellId)
+        DatabaseController.addLastMoney(chengeMoney :Int16(-receiveCellYen))
         performSegue(withIdentifier: "touncomp2", sender: nil)
         
         self.tabBarController?.selectedIndex = 2

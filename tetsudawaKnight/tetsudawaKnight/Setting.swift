@@ -21,9 +21,8 @@ class Setting:UIViewController {
         inpass.text = String(inword)
         
     }
-    
-    
-    @IBAction func put0(_ sender: Any) {
+
+        @IBAction func put0(_ sender: Any) {
         inword.append("0")
         inpass.text = String(inword)
         bang = bang + 1
@@ -113,6 +112,9 @@ class Setting:UIViewController {
             DatabaseController.editPass(editPass: inword)
             performSegue(withIdentifier: "owari", sender: nil)
         }
+    }
+    @IBAction func putbatu(_ sender: Any) {
+        performSegue(withIdentifier: "owari", sender: nil)
     }
     @IBAction func putb(_ sender: Any) {
         inword = ""

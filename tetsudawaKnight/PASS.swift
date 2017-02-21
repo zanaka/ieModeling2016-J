@@ -230,6 +230,7 @@ class PASS: UIViewController {
         inbang = ""
         bang = 0
         inpass.text = String(inbang)
+        tigau.text = String("")
         
         
     }
