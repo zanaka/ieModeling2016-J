@@ -177,6 +177,7 @@
 				79AB08D11E396F420068B88A /* Child */,
 				3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */,
 				79075CCC1E517BBE0038D610 /* PASS.swift */,
+				33EEACE41E5C60DF005D2A20 /* Main.storyboard */,
 				33E437DC1E022119001AE294 /* AppDelegate.swift */,
 				79982D7D1E25C50A009366DF /* TaskCell.swift */,
 				79982D7F1E25C50A009366DF /* TaskSetCell.swift */,
@@ -227,7 +228,6 @@
 		79AB08D11E396F420068B88A /* Child */ = {
 			isa = PBXGroup;
 			children = (
-				33EEACE41E5C60DF005D2A20 /* Main.storyboard */,
 				79075CD01E517E050038D610 /* TaskUncomp.swift */,
 				79AB08D21E39806C0068B88A /* TaskComp.swift */,
 				79AB08D41E3982A60068B88A /* ChildHistoryView.swift */,
