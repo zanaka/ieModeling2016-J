@@ -37,6 +37,29 @@ var HisTaskList: [TaskStruct] =
 ]
 
 
+struct UserStruct
+{
+    var name : String = "username"
+    var id :String = "id"
+    var yen :Int16 = 0
+    var isParent : String = "true"
+    var password : String = "0000"
+    
+    init(name: String, yen:Int16, id:String, isParent:String, password:String)
+    {
+        self.name = name
+        self.yen = yen
+        self.id = id
+        self.isParent = isParent
+        self.password = password
+    }
+}
+
+var UserList: [UserStruct] =
+[
+
+]
+
 var money = 1000
 var pass = "1111"
 var payHistoryList = ["100"]
