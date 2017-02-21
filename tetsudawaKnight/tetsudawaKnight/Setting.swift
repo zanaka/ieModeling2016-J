@@ -24,31 +24,95 @@ class Setting:UIViewController {
     
     
     @IBAction func put0(_ sender: Any) {
+        inword.append("0")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put1(_ sender: Any) {
         inword.append("1")
         inpass.text = String(inword)
         bang = bang + 1
         if ( bang >= 4 ){
+                DatabaseController.editPass(editPass: inword)
                 performSegue(withIdentifier: "owari", sender: nil)
         }
     }
     
     @IBAction func put2(_ sender: Any) {
+        inword.append("2")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put3(_ sender: Any) {
+        inword.append("3")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put4(_ sender: Any) {
+        inword.append("4")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put5(_ sender: Any) {
+        inword.append("5")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put6(_ sender: Any) {
+        inword.append("6")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put7(_ sender: Any) {
+        inword.append("7")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put8(_ sender: Any) {
+        inword.append("8")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func put9(_ sender: Any) {
+        inword.append("9")
+        inpass.text = String(inword)
+        bang = bang + 1
+        if ( bang >= 4 ){
+            DatabaseController.editPass(editPass: inword)
+            performSegue(withIdentifier: "owari", sender: nil)
+        }
     }
     @IBAction func putb(_ sender: Any) {
         inword = ""

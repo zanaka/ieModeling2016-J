@@ -150,7 +150,7 @@
                     <navigationItem key="navigationItem" title="設定" id="pr0-Qs-rUN">
                         <barButtonItem key="leftBarButtonItem" title="親" id="9II-IA-zZH">
                             <connections>
-                                <segue destination="Eyu-Rz-Pat" kind="modal" id="mMf-O1-lXO"/>
+                                <segue destination="Eyu-Rz-Pat" kind="modal" modalTransitionStyle="crossDissolve" id="mMf-O1-lXO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -692,10 +692,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="タスク" image="丸" id="ZVE-hu-P4l" userLabel="タスク管理"/>
-                    <navigationItem key="navigationItem" title="タスク管理" id="vv8-B9-SyG">
-                        <barButtonItem key="leftBarButtonItem" title="子" id="wRP-b0-QLZ">
+                    <navigationItem key="navigationItem" title="タスク管理" id="Cgv-Hl-m3j">
+                        <barButtonItem key="leftBarButtonItem" title="子" id="ho2-JQ-E6G">
                             <connections>
-                                <segue destination="i71-bp-ZPV" kind="modal" modalTransitionStyle="flipHorizontal" id="3TV-fD-fOx"/>
+                                <action selector="putsend:" destination="E2M-LC-fPt" id="IE5-Ya-Iq7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -706,6 +706,8 @@
                         <segue destination="DkR-Wg-K5u" kind="show" identifier="ToTaskClear" id="irt-G1-DlZ">
                             <nil key="action"/>
                         </segue>
+                        <segue destination="i71-bp-ZPV" kind="modal" identifier="topass" modalTransitionStyle="flipHorizontal" id="ou2-YP-qsS"/>
+                        <segue destination="cvh-yr-2NW" kind="modal" identifier="tonopass" modalTransitionStyle="crossDissolve" id="YSU-zH-Mrq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSN-xd-diZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -864,7 +866,7 @@
                     <navigationItem key="navigationItem" title="履歴" id="sxa-2w-sOT">
                         <barButtonItem key="leftBarButtonItem" title="子" id="aTC-cL-ycH">
                             <connections>
-                                <segue destination="i71-bp-ZPV" kind="modal" modalTransitionStyle="flipHorizontal" id="P2d-VJ-EIs"/>
+                                <action selector="putsend:" destination="GLG-eh-ejX" id="Oou-02-H2x"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -872,6 +874,8 @@
                     <connections>
                         <outlet property="taskTableView" destination="hy5-JV-E7A" id="9hy-R8-0Zq"/>
                         <segue destination="vcn-Ug-OoV" kind="show" identifier="ToTaskUnClear" id="6DO-94-Jga"/>
+                        <segue destination="i71-bp-ZPV" kind="modal" modalTransitionStyle="flipHorizontal" id="0Gi-PN-us3"/>
+                        <segue destination="cvh-yr-2NW" kind="modal" identifier="tonopass" modalTransitionStyle="crossDissolve" id="8tk-iH-Uqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gQ-Yf-x4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1249,9 +1253,9 @@
         <image name="達成エフェクト 未完成" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P2d-VJ-EIs"/>
-        <segue reference="i22-BA-apH"/>
+        <segue reference="mMf-O1-lXO"/>
         <segue reference="F6g-LQ-rF0"/>
+        <segue reference="0Gi-PN-us3"/>
         <segue reference="KC9-ea-2J2"/>
     </inferredMetricsTieBreakers>
 </document>
