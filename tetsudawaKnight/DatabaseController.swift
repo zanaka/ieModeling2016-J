@@ -153,6 +153,7 @@ class DatabaseController {
     }
     
     class func editTask(searchId :String, chengeName :String, chengePrice :Int16, chengeIsComp: String){
+
         let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", searchId)
         deleteRequest.predicate = predicate
@@ -160,6 +161,17 @@ class DatabaseController {
             let searchResults = try DatabaseController.getContext().fetch(deleteRequest)
             for result in searchResults as! [Task]{
                 let record = result as! NSManagedObject
+                if chengeIsComp != result.isComp
+                {
+                    if chengeIsComp == "true"
+                    {
+                        self.addLastMoney(chengeMoney: Int64(result.clearPrice))
+                    }else if chengeIsComp == "false"
+                    {
+                        self.addLastMoney(chengeMoney: -(Int64)(result.clearPrice))
+                    }
+                }
+
                 record.setValue(chengeName, forKey: "taskName")
                 record.setValue(chengePrice, forKey: "clearPrice")
                 record.setValue(chengeIsComp, forKey: "isComp")
@@ -256,6 +268,9 @@ class DatabaseController {
         self.saveContext()
     }
     
+    
+    
+    
     class func addLastMoney(chengeMoney :Int64){
         let editRequest:NSFetchRequest<User> = User.fetchRequest()
         do{
@@ -272,6 +287,9 @@ class DatabaseController {
         self.saveContext()
     }
 
+    
+    
+    
     
     class func loadLastMoneyValue(){
         let loadRequest:NSFetchRequest<User> = User.fetchRequest()
@@ -351,6 +369,56 @@ class DatabaseController {
         
         self.saveContext()
  
+    }
+    
+    
+    
+    
+    
+    class func reloadPayHistory() {
+        let fetchRequest:NSFetchRequest<PayHistory> = PayHistory.fetchRequest()
+        do{
+            PayHistoryList.removeAll()
+           let searchResults = try DatabaseController.getContext().fetch(fetchRequest)
+            
+            
+            for result in searchResults as [PayHistory]{
+                //DatabaseController.getContext().delete(result)
+                //self.saveContext()
+                PayHistoryList.append(PayHistoryStruct(price: result.price, id: result.id!, time: result.timeStamp as! Date))
+            }
+            
+        }
+        catch{
+        }
+    }
+    
+    
+    class func addPayHistory(price: Int16){
+        let payHis:PayHistory = NSEntityDescription.insertNewObject(forEntityName: "PayHistory", into: DatabaseController.getContext()) as! PayHistory
+        
+        
+        payHis.price = Int16(price)
+        payHis.id = NSUUID().uuidString
+        payHis.timeStamp = Date() as NSDate?
+        
+        self.saveContext()
+    }
+    
+         class func deletePayHistory(id :String){
+        let deleteRequest:NSFetchRequest<PayHistory> = PayHistory.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", id)
+        deleteRequest.predicate = predicate
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(deleteRequest)
+            for result in searchResults as! [PayHistory]{
+                DatabaseController.getContext().delete(result)
+            }
+        }
+        catch{
+            
+        }
+        self.saveContext()
     }
 
 

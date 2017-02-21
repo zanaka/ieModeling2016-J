@@ -58,4 +58,23 @@ var ChildList: [UserStruct] =
 
 var money = 1000
 var pass = "0"
-var payHistoryList = ["100"]
+
+
+struct PayHistoryStruct
+{
+    var id :String = "id"
+    var price : Int16 = 0
+    var timeStamp = Date()
+    
+    init(price :Int16, id:String, time :Date)
+    {
+        self.price = price
+        self.id = id
+        self.timeStamp = time
+    }
+}
+
+var PayHistoryList :[PayHistoryStruct] =
+[
+
+]
