@@ -27,6 +27,7 @@
 		33EEACE21E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACE01E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift */; };
 		33EEACE31E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACE11E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift */; };
 		33EEACE61E5C60DF005D2A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EEACE41E5C60DF005D2A20 /* Main.storyboard */; };
+		33EEACE91E5C6351005D2A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EEACE71E5C6351005D2A20 /* Main.storyboard */; };
 		79075CCD1E517BBE0038D610 /* PASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CCC1E517BBE0038D610 /* PASS.swift */; };
 		79075CD11E517E050038D610 /* TaskUncomp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CD01E517E050038D610 /* TaskUncomp.swift */; };
 		790D74E21E56B6EB007A901D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D74E11E56B6EB007A901D /* Setting.swift */; };
@@ -88,6 +89,7 @@
 		33EEACE01E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		33EEACE11E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		33EEACE51E5C60DF005D2A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33EEACE81E5C6351005D2A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33FE59221E3747F900450C62 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		79075CCC1E517BBE0038D610 /* PASS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PASS.swift; path = ../PASS.swift; sourceTree = "<group>"; };
 		79075CD01E517E050038D610 /* TaskUncomp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskUncomp.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				33E437DE1E022119001AE294 /* ViewController.swift */,
 				79DCD0E61E13652800B63CF6 /* Data.swift */,
 				33E437E31E022119001AE294 /* Assets.xcassets */,
+				33EEACE71E5C6351005D2A20 /* Main.storyboard */,
 				33E437E51E022119001AE294 /* LaunchScreen.storyboard */,
 				33E437E81E022119001AE294 /* Info.plist */,
 				3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */,
@@ -344,6 +347,7 @@
 				33EEACE61E5C60DF005D2A20 /* Main.storyboard in Resources */,
 				33E437E71E022119001AE294 /* LaunchScreen.storyboard in Resources */,
 				33E437E41E022119001AE294 /* Assets.xcassets in Resources */,
+				33EEACE91E5C6351005D2A20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				33EEACE51E5C60DF005D2A20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33EEACE71E5C6351005D2A20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33EEACE81E5C6351005D2A20 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
