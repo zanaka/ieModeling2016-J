@@ -14,6 +14,7 @@ class Setting:UIViewController {
     
     var inword : String = ""
     var bang : Int = 0
+    
     @IBOutlet weak var inpass: UILabel!
     
     override func viewDidLoad() {
