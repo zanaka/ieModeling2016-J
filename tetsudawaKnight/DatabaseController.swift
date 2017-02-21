@@ -240,8 +240,23 @@ class DatabaseController {
     }
 
     
-    class func loadPass(){
-        
+    class func loadPass() -> String{
+        let parentRequest:NSFetchRequest<User> = User.fetchRequest()
+        let parentpredicate = NSPredicate(format: "isParent == %@", "true")
+        var receivePass = "0000"
+        parentRequest.predicate = parentpredicate
+        do{
+            let initResults = try DatabaseController.getContext().fetch(parentRequest)
+            if initResults.count == 0{
+                
+                for result in initResults as [User]{
+                    receivePass = result.password!
+                }            }
+        }
+        catch{
+            
+        }
+        return receivePass
     }
     
     class func initUser(){
@@ -279,7 +294,7 @@ class DatabaseController {
                 user.name = "Child"
                 user.id = NSUUID().uuidString
                 user.money = 0
-                user.isParent = "true"
+                user.isParent = "false"
                 user.password = "0000"
             }
         }
