@@ -12,6 +12,8 @@ class PayHistoryCell: UITableViewCell
 {
     
     
+    @IBOutlet weak var payAmountLabel: UILabel!
+    @IBOutlet weak var payTimestampLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
