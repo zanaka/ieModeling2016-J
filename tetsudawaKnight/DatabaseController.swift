@@ -315,6 +315,7 @@ class DatabaseController {
         catch{
             
         }
+        self.saveContext()
     }
 
     class func initEntity(){
