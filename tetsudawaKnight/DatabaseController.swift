@@ -172,15 +172,33 @@ class DatabaseController {
     }
     
     class func clearTask(id :String){
-        let clearRequest:NSFetchRequest<Task> = Task.fetchRequest()
+        let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", id)
-        clearRequest.predicate = predicate
+        deleteRequest.predicate = predicate
         do{
-            let searchResults = try DatabaseController.getContext().fetch(clearRequest)
-            
+            let searchResults = try DatabaseController.getContext().fetch(deleteRequest)
+            for result in searchResults as! [Task]{
+                
+                let record = result as! NSManagedObject
+                record.setValue("true", forKey: "isComp")
+            }
+        } catch{
             
         }
-        catch{
+        self.saveContext()
+    }
+    class func UnclearTask(id :String){
+        let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "id == %@", id)
+        deleteRequest.predicate = predicate
+        do{
+            let searchResults = try DatabaseController.getContext().fetch(deleteRequest)
+            for result in searchResults as! [Task]{
+                
+                let record = result as! NSManagedObject
+                record.setValue("false", forKey: "isComp")
+            }
+        } catch{
             
         }
         self.saveContext()

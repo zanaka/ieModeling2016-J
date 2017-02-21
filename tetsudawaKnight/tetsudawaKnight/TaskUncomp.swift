@@ -6,8 +6,6 @@
 //  Copyright © 2017年 Kaito Ishizuka. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 class TaskUncomp: UIViewController {
@@ -16,6 +14,7 @@ class TaskUncomp: UIViewController {
     
     var receiveCellText : String = "タスク名"
     var receiveCellYen : Int = 0
+    var receiveCellId : String = "id"
     
     @IBOutlet weak var Taskname: UILabel!
     @IBOutlet weak var Taskyen: UILabel!
@@ -29,6 +28,11 @@ class TaskUncomp: UIViewController {
         Taskname.text = receiveCellText
     }
     
+
+    @IBAction func putuncomp(_ sender: Any) {
+        DatabaseController.UnclearTask(id: receiveCellId)
+        performSegue(withIdentifier: "touncomp", sender: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

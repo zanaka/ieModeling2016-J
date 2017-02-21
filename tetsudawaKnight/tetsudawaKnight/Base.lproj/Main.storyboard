@@ -917,7 +917,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="取り消す"/>
                                 <connections>
-                                    <segue destination="GLG-eh-ejX" kind="show" id="LBI-Zj-jLz"/>
+                                    <action selector="putuncomp:" destination="vcn-Ug-OoV" eventType="touchDown" id="0kY-dZ-ufv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -927,11 +927,13 @@
                     <connections>
                         <outlet property="Taskname" destination="JHS-vK-QW4" id="rQ3-x6-YQu"/>
                         <outlet property="Taskyen" destination="awX-K9-uda" id="MDu-Iw-fsq"/>
+                        <outlet property="putuncomp" destination="cq4-qd-Ll2" id="EdF-f0-7xv"/>
+                        <segue destination="GLG-eh-ejX" kind="push" id="9Aa-uG-B32"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuC-UB-sW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3176" y="2586"/>
+            <point key="canvasLocation" x="3174.375" y="2585.9154929577467"/>
         </scene>
         <!--PASS-->
         <scene sceneID="Kh3-b9-oiW">
@@ -1248,10 +1250,10 @@
         <image name="達成エフェクト 未完成" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KC9-ea-2J2"/>
-        <segue reference="Z0v-Td-O3K"/>
-        <segue reference="pua-iR-0EM"/>
-        <segue reference="16D-aZ-pkJ"/>
         <segue reference="3TV-fD-fOx"/>
+        <segue reference="pua-iR-0EM"/>
+        <segue reference="Z0v-Td-O3K"/>
+        <segue reference="KC9-ea-2J2"/>
+        <segue reference="9Aa-uG-B32"/>
     </inferredMetricsTieBreakers>
 </document>
