@@ -24,6 +24,7 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     var currentCellText : String = ""
     var currentCellYen: Int = 0
+    var currentCellId : String = "id"
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -47,6 +48,7 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     {
         currentCellText = HisTaskList[indexPath.row].name
         currentCellYen = Int(HisTaskList[indexPath.row].yen)
+        currentCellId = HisTaskList[indexPath.row].id
         performSegue(withIdentifier: "ToTaskUnClear", sender: nil)
         taskTableView.deselectRow(at: indexPath, animated: true)
     }
@@ -57,6 +59,8 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
             let tu:TaskUncomp = segue.destination as! TaskUncomp
             tu.receiveCellText = currentCellText
             tu.receiveCellYen = currentCellYen
+            tu.receiveCellId = currentCellId
+            
         }
     }
     
