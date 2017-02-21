@@ -57,5 +57,5 @@ var ChildList: [UserStruct] =
 ]
 
 var money = 1000
-var pass = "1111"
+var pass = "0"
 var payHistoryList = ["100"]

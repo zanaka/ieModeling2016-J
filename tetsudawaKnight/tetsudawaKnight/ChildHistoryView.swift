@@ -14,6 +14,8 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     // 合計金額の表示
         
     
+
+    
     @IBOutlet weak var taskTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,14 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     
+    @IBAction func putsend(_ sender: Any) {
+        DatabaseController.loadPass()
+        if ( pass == "0" ){
+            performSegue(withIdentifier: "tonopass", sender: nil)
+        }else{
+            performSegue(withIdentifier: "topass", sender: nil)
+        }
+    }
     
     var currentCellText : String = ""
     var currentCellYen: Int = 0
