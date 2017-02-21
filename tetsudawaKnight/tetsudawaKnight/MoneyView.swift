@@ -38,8 +38,10 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "payHistoryCell")
-        cell.textLabel?.text = String(PayHistoryList[indexPath.row].price)
+        let cell = payHistoryTable.dequeueReusableCell(withIdentifier: "payHistoryCell") as! PayHistoryCell
+//        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "payHistoryCell")
+        cell.payAmountLabel.text = String(PayHistoryList[indexPath.row].price)
+        cell.payTimestampLabel.text = String(describing: PayHistoryList[indexPath.row].timeStamp)
         
         return(cell)
     }

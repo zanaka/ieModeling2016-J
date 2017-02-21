@@ -199,6 +199,8 @@ class DatabaseController {
         }
         self.saveContext()
     }
+    
+    
     class func UnclearTask(id :String){
         let deleteRequest:NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "id == %@", id)
