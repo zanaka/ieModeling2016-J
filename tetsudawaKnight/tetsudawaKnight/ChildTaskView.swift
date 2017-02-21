@@ -67,6 +67,13 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
 
+    @IBAction func putsend(_ sender: Any) {
+        if ( pass == "0" ){
+            performSegue(withIdentifier: "tonopass", sender: nil)
+        }else{
+            performSegue(withIdentifier: "topass", sender: nil)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

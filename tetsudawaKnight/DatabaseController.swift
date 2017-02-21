@@ -302,6 +302,21 @@ class DatabaseController {
         }
     }
     
+        
+    class func editPass(editPass: String){
+        let parentRequest:NSFetchRequest<Pass> = Pass.fetchRequest()
+        do{
+            let passResults = try DatabaseController.getContext().fetch(parentRequest)
+            for result in passResults as [Pass]{
+                let record = result as! NSManagedObject
+                record.setValue(editPass, forKey: "password")
+            }
+        }
+        catch{
+            
+        }
+    }
+
     class func initEntity(){
         
         let childRequest:NSFetchRequest<User> = User.fetchRequest()
@@ -319,38 +334,23 @@ class DatabaseController {
             
         }
         
-
+        
         let passRequest:NSFetchRequest<Pass> = Pass.fetchRequest()
         do{
             let passResults = try DatabaseController.getContext().fetch(passRequest)
             if passResults.count == 0{
                 let pass :Pass = NSEntityDescription.insertNewObject(forEntityName: "Pass", into: DatabaseController.getContext()) as! Pass
                 
-                pass.password = "0123"
+                pass.password = "0"
             }
         }
         catch{
             
         }
-
+        
         self.saveContext()
-
-    }
-    
-    class func editPass(editPass: String){
-        let parentRequest:NSFetchRequest<Pass> = Pass.fetchRequest()
-        do{
-            let passResults = try DatabaseController.getContext().fetch(parentRequest)
-            for result in passResults as [Pass]{
-                let record = result as! NSManagedObject
-                record.setValue(editPass, forKey: "password")
-            }
-        }
-        catch{
-            
-        }
+ 
     }
 
-    
 
 }

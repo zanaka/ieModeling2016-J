@@ -21,6 +21,13 @@ class ChildHistoryView: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     
+    @IBAction func putsend(_ sender: Any) {
+        if ( pass == "0" ){
+            performSegue(withIdentifier: "tonopass", sender: nil)
+        }else{
+            performSegue(withIdentifier: "topass", sender: nil)
+        }
+    }
     
     var currentCellText : String = ""
     var currentCellYen: Int = 0
