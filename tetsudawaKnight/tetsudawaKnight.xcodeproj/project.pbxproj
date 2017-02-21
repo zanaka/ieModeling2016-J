@@ -24,6 +24,10 @@
 		33EEACD91E5BE0B5005D2A20 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACD51E5BE0B5005D2A20 /* User+CoreDataProperties.swift */; };
 		33EEACDA1E5BE0B5005D2A20 /* Pass+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACD61E5BE0B5005D2A20 /* Pass+CoreDataClass.swift */; };
 		33EEACDB1E5BE0B5005D2A20 /* Pass+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACD71E5BE0B5005D2A20 /* Pass+CoreDataProperties.swift */; };
+		33EEACE21E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACE01E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift */; };
+		33EEACE31E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EEACE11E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift */; };
+		33EEACE61E5C60DF005D2A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EEACE41E5C60DF005D2A20 /* Main.storyboard */; };
+		33EEACE91E5C6351005D2A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EEACE71E5C6351005D2A20 /* Main.storyboard */; };
 		79075CCD1E517BBE0038D610 /* PASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CCC1E517BBE0038D610 /* PASS.swift */; };
 		79075CD11E517E050038D610 /* TaskUncomp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79075CD01E517E050038D610 /* TaskUncomp.swift */; };
 		790D74E21E56B6EB007A901D /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D74E11E56B6EB007A901D /* Setting.swift */; };
@@ -35,7 +39,6 @@
 		79982D8C1E25CC46009366DF /* ParentTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79982D8B1E25CC46009366DF /* ParentTaskView.swift */; };
 		79AB08D31E39806C0068B88A /* TaskComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB08D21E39806C0068B88A /* TaskComp.swift */; };
 		79AB08D51E3982A60068B88A /* ChildHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AB08D41E3982A60068B88A /* ChildHistoryView.swift */; };
-		79C658AC1E5C1E8E001020D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C658AA1E5C1E8E001020D5 /* Main.storyboard */; };
 		79DCD0E51E13601100B63CF6 /* ChildTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCD0E41E13601100B63CF6 /* ChildTaskView.swift */; };
 		79DCD0E71E13652800B63CF6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DCD0E61E13652800B63CF6 /* Data.swift */; };
 		79DE6CBC1E5C2F510000EF23 /* PassReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DE6CBB1E5C2F510000EF23 /* PassReset.swift */; };
@@ -83,6 +86,10 @@
 		33EEACD51E5BE0B5005D2A20 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		33EEACD61E5BE0B5005D2A20 /* Pass+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pass+CoreDataClass.swift"; sourceTree = "<group>"; };
 		33EEACD71E5BE0B5005D2A20 /* Pass+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pass+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33EEACE01E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		33EEACE11E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33EEACE51E5C60DF005D2A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33EEACE81E5C6351005D2A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33FE59221E3747F900450C62 /* DataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		79075CCC1E517BBE0038D610 /* PASS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PASS.swift; path = ../PASS.swift; sourceTree = "<group>"; };
 		79075CD01E517E050038D610 /* TaskUncomp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskUncomp.swift; sourceTree = "<group>"; };
@@ -95,7 +102,6 @@
 		79982D8B1E25CC46009366DF /* ParentTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentTaskView.swift; sourceTree = "<group>"; };
 		79AB08D21E39806C0068B88A /* TaskComp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskComp.swift; sourceTree = "<group>"; };
 		79AB08D41E3982A60068B88A /* ChildHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildHistoryView.swift; sourceTree = "<group>"; };
-		79C658AB1E5C1E8E001020D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79DCD0E41E13601100B63CF6 /* ChildTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTaskView.swift; sourceTree = "<group>"; };
 		79DCD0E61E13652800B63CF6 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		79DE6CBB1E5C2F510000EF23 /* PassReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassReset.swift; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 		3314E4ED1E34F15400AC3D4B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				33EEACE01E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift */,
+				33EEACE11E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift */,
 				33EEACD41E5BE0B5005D2A20 /* User+CoreDataClass.swift */,
 				33EEACD51E5BE0B5005D2A20 /* User+CoreDataProperties.swift */,
 				33EEACD61E5BE0B5005D2A20 /* Pass+CoreDataClass.swift */,
@@ -169,13 +177,14 @@
 				79AB08D11E396F420068B88A /* Child */,
 				3314E4EB1E34EF7900AC3D4B /* DatabaseController.swift */,
 				79075CCC1E517BBE0038D610 /* PASS.swift */,
+				33EEACE41E5C60DF005D2A20 /* Main.storyboard */,
 				33E437DC1E022119001AE294 /* AppDelegate.swift */,
 				79982D7D1E25C50A009366DF /* TaskCell.swift */,
 				79982D7F1E25C50A009366DF /* TaskSetCell.swift */,
 				33E437DE1E022119001AE294 /* ViewController.swift */,
-				79C658AA1E5C1E8E001020D5 /* Main.storyboard */,
 				79DCD0E61E13652800B63CF6 /* Data.swift */,
 				33E437E31E022119001AE294 /* Assets.xcassets */,
+				33EEACE71E5C6351005D2A20 /* Main.storyboard */,
 				33E437E51E022119001AE294 /* LaunchScreen.storyboard */,
 				33E437E81E022119001AE294 /* Info.plist */,
 				3314E4E41E34EAF700AC3D4B /* DataModel.xcdatamodeld */,
@@ -335,9 +344,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EEACE61E5C60DF005D2A20 /* Main.storyboard in Resources */,
 				33E437E71E022119001AE294 /* LaunchScreen.storyboard in Resources */,
 				33E437E41E022119001AE294 /* Assets.xcassets in Resources */,
-				79C658AC1E5C1E8E001020D5 /* Main.storyboard in Resources */,
+				33EEACE91E5C6351005D2A20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +389,7 @@
 				79982D851E25C50A009366DF /* TaskSetCell.swift in Sources */,
 				3314E4EC1E34EF7900AC3D4B /* DatabaseController.swift in Sources */,
 				79982D841E25C50A009366DF /* TaskEdit.swift in Sources */,
+				33EEACE21E5C42B1005D2A20 /* PayHistory+CoreDataClass.swift in Sources */,
 				33EEACC71E5AC273005D2A20 /* ParentHistView.swift in Sources */,
 				330E84791E56B76800171988 /* Task+CoreDataClass.swift in Sources */,
 				79DCD0E71E13652800B63CF6 /* Data.swift in Sources */,
@@ -386,6 +397,7 @@
 				79AB08D51E3982A60068B88A /* ChildHistoryView.swift in Sources */,
 				79AB08D31E39806C0068B88A /* TaskComp.swift in Sources */,
 				79DCD0E51E13601100B63CF6 /* ChildTaskView.swift in Sources */,
+				33EEACE31E5C42B1005D2A20 /* PayHistory+CoreDataProperties.swift in Sources */,
 				330E847F1E56BDE900171988 /* Model_for_v2.xcmappingmodel in Sources */,
 				3387937B1E361C37008FD3D5 /* AddTaskWithInput.swift in Sources */,
 				33E437DD1E022119001AE294 /* AppDelegate.swift in Sources */,
@@ -432,10 +444,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		79C658AA1E5C1E8E001020D5 /* Main.storyboard */ = {
+		33EEACE41E5C60DF005D2A20 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				79C658AB1E5C1E8E001020D5 /* Base */,
+				33EEACE51E5C60DF005D2A20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33EEACE71E5C6351005D2A20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33EEACE81E5C6351005D2A20 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

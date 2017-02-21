@@ -15,15 +15,16 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var payHistoryTable: UITableView!
     
     @IBAction func pay(_ sender: Any) {
-        if payAmount != nil
+        if payAmount.text != ""
         {
-            if Int(payAmount.text!)! <= money
-            {
-                money -= Int(payAmount.text!)!
-                moneyLabel.text = String(money)
-                payHistoryList.append(payAmount.text!)
-                payHistoryTable.reloadData()
-            }
+
+            DatabaseController.addLastMoney(chengeMoney: -Int64(payAmount.text!)!)
+            DatabaseController.loadLastMoneyValue()
+            moneyLabel.text = String(money)
+            DatabaseController.addPayHistory(price: Int16(payAmount.text!)!)
+            DatabaseController.reloadPayHistory()
+            payHistoryTable.reloadData()
+
         }
         payAmount.text = ""
     }
@@ -31,14 +32,14 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (payHistoryList.count)
+        return (PayHistoryList.count)
     }
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "payHistoryCell")
-        cell.textLabel?.text = payHistoryList[indexPath.row]
+        cell.textLabel?.text = String(PayHistoryList[indexPath.row].price)
         
         return(cell)
     }
@@ -47,9 +48,11 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            money += Int(payHistoryList[indexPath.row])!
+            DatabaseController.addLastMoney(chengeMoney: Int64(PayHistoryList[indexPath.row].price))
+            DatabaseController.loadLastMoneyValue()
             moneyLabel.text = String(money)
-            payHistoryList.remove(at: indexPath.row)
+            DatabaseController.deletePayHistory(id: PayHistoryList[indexPath.row].id)
+            DatabaseController.reloadPayHistory()
             payHistoryTable.reloadData()
         }
     }
@@ -60,5 +63,8 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
         DatabaseController.loadLastMoneyValue()
         moneyLabel.text = String(money)
         payAmount.keyboardType = UIKeyboardType.numberPad
+        DatabaseController.reloadPayHistory()
+        payAmount.keyboardType = UIKeyboardType.numberPad
+        payHistoryTable.reloadData()
     }
 }

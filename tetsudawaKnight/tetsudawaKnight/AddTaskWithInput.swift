@@ -15,9 +15,13 @@ class AddTaskWithInput: UIViewController{
     @IBOutlet weak var addTaskPrice: UITextField!
     
     @IBAction func addTask(_ sender: Any) {
-        
-        DatabaseController.addTask(name: addTaskName.text!, price: Int(addTaskPrice.text!)!, iscomp: "false")
-        DatabaseController.saveContext()
+        var inputName = ""
+        var inputPrice :Int16 = 0
+        if addTaskName.text != "" && addTaskPrice.text != ""
+        {
+            DatabaseController.addTask(name: addTaskName.text!, price: Int(addTaskPrice.text!)!, iscomp: "false")
+            DatabaseController.saveContext()
+        }
     }
     
     override func viewDidLoad() {
