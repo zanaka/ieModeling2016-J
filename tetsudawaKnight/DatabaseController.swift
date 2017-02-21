@@ -177,6 +177,8 @@ class DatabaseController {
         clearRequest.predicate = predicate
         do{
             let searchResults = try DatabaseController.getContext().fetch(clearRequest)
+            
+            
         }
         catch{
             

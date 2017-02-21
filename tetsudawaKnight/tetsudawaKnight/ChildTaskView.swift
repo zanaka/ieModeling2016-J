@@ -27,6 +27,7 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     var currentCellText : String = ""
     var currentCellYen: Int = 0
+    var currentCellId : String = "id"
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -50,6 +51,7 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
     {
         currentCellText = taskList[indexPath.row].name
         currentCellYen = Int(taskList[indexPath.row].yen)
+        currentCellId = taskList[indexPath.row].id
         performSegue(withIdentifier: "ToTaskClear", sender: nil)
         taskTableView.deselectRow(at: indexPath, animated: true)
     }
@@ -60,6 +62,7 @@ class ChildTaskView: UIViewController, UITableViewDelegate, UITableViewDataSourc
             let tc:TaskComp = segue.destination as! TaskComp
             tc.receiveCellText = currentCellText
             tc.receiveCellYen = currentCellYen
+            tc.receiveCellId = currentCellId
         }
     }
     

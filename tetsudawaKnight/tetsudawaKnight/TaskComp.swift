@@ -14,6 +14,7 @@ class TaskComp: UIViewController {
     
     var receiveCellText : String = "タスク名"
     var receiveCellYen : Int = 0
+    var receiveCellId : String = "id"
     
     @IBOutlet weak var Taskname: UILabel!
     @IBOutlet weak var Taskyen: UILabel!
@@ -27,6 +28,11 @@ class TaskComp: UIViewController {
         Taskname.text = receiveCellText
     }
     
+    
+    @IBAction func putcomp(_ sender: Any) {
+        DatabaseController.clearTask(id: receiveCellId)
+        performSegue(withIdentifier: "tocomp2", sender: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
