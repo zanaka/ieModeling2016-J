@@ -64,6 +64,7 @@ class MoneyView:UIViewController, UITableViewDataSource, UITableViewDelegate
         moneyLabel.text = String(money)
         payAmount.keyboardType = UIKeyboardType.numberPad
         DatabaseController.reloadPayHistory()
+        payAmount.keyboardType = UIKeyboardType.numberPad
         payHistoryTable.reloadData()
     }
 }

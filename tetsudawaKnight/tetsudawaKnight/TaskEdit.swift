@@ -65,6 +65,7 @@ class TaskEdit: UIViewController
         }else{
             taskIsCompControll.selectedSegmentIndex = 1
         }
+        clearPriceSetLabel.keyboardType = UIKeyboardType.numberPad
         nameSetLabel.text = task.name
         clearPriceSetLabel.text = String(task.yen)
         
