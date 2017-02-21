@@ -1,5 +1,5 @@
 //
-//  User+CoreDataClass.swift
+//  Pass+CoreDataClass.swift
 //  tetsudawaKnight
 //
 //  Created by Kaito Ishizuka on 2017/02/21.
@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 
-public class User: NSManagedObject {
+public class Pass: NSManagedObject {
 
 }
