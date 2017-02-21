@@ -37,8 +37,22 @@ class TaskEdit: UIViewController
     }
 
     @IBAction func CommitChenges(_ sender: Any) {
-        DatabaseController.editTask(searchId: task.id, chengeName: nameSetLabel.text!, chengePrice: Int16(clearPriceSetLabel.text!)!, chengeIsComp: taskIsComp)
-        DatabaseController.saveContext()
+        var inputName = ""
+        var inputPrice :Int16 = 0
+        if nameSetLabel.text == ""
+        {
+            inputName = task.name
+        }else{
+            inputName = nameSetLabel.text!
+        }
+        if clearPriceSetLabel.text == ""
+        {
+            inputPrice = Int16(task.yen)
+        }else{
+            inputPrice = Int16(clearPriceSetLabel.text!)!
+        }
+        DatabaseController.editTask(searchId: task.id, chengeName: inputName, chengePrice: inputPrice, chengeIsComp: taskIsComp)
+
     }
     
     override func viewDidLoad() {
